@@ -7,12 +7,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AB7E14D7-0A9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{8BE5CFD1-93B1-4FDC-9F50-4D2B66950AA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProjectsWithOnionArchitecture.Domain", "src\Core\WebProjectsWithOnionArchitecture.Domain\WebProjectsWithOnionArchitecture.Domain.csproj", "{6B7A2430-5AC9-47CA-A8C7-2ABDE682781B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B7A2430-5AC9-47CA-A8C7-2ABDE682781B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B7A2430-5AC9-47CA-A8C7-2ABDE682781B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B7A2430-5AC9-47CA-A8C7-2ABDE682781B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B7A2430-5AC9-47CA-A8C7-2ABDE682781B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8BE5CFD1-93B1-4FDC-9F50-4D2B66950AA3} = {AB7E14D7-0A95-4FBB-A31D-0401320A3F69}
+		{6B7A2430-5AC9-47CA-A8C7-2ABDE682781B} = {8BE5CFD1-93B1-4FDC-9F50-4D2B66950AA3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {57DA902C-FC59-49DD-85CB-E0904A233BC3}
