@@ -36,7 +36,19 @@ Onion Architecture
 Application ve Domain katmanları Core katmanları olarak geçer. Appliacation katmanı, Domain katmanını
 referans alır.
 
-	3-
+	3-Persistance => Applicationdakiş interfacelerin, abstract classların implemente edildiği katmandır.
+					 Bu katmanda gerçek implamantasyonlar/servisler burada tanımlanır. Data odaklı servisler bu katmanda tanımlanır. Domain ile ilişkisi olan işlemler burada tanımlanır. (DbContext, Migration, Seeding, İnterface İmplemantation, UnitOfWork,Repository)
+    
+    3.1-Infrastructure => Sisteme eklenecek dış yapılanmalarla etkileme girecek classlar bu katmana dahil edelicek. Domain alanı dışında kalan işlemler bu katmanda yapılır. (E-mail,Notification, Tckimlk Doprulama, Ödeme)
+
+    3.2-Presantation => Sunum yapıldığı katman.
+
+Yatay düzlemler birbirini referans alabilir. Dıştaki katmanlar içtekileri referans alabilir. içteki katman dıştakini referans alamaz.
+
+
+
+
+
 
 
 
