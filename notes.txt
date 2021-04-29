@@ -1,0 +1,15 @@
+1. Entity türü dış dünyaya gönderilmez. View model ya da DTO'lar gönderilir. Dış dünyaya gönderilecek olan türler, modeller ayrı bir katman olarak tanımlanmalıdır.
+
+2. .Net servis mimarilerinde healthCheck yapılır. Özet olarak clienttan toplu olarak requestler gönderilecekse 100 tane 1000 tane her birinin timeout süresini beklemek yerine önce healthCheck 
+yapıp sonrasında toplu istek gönderebiliriz. Eğer tek istek göndereceksek healthCheck etmeye gerek 
+olmayabilir. 
+
+3. Start.up classı Extension metotlarla kapsüllenmelidir.
+
+4. DTO'lar, View Modallar için mapping işlemlerini automapper gibi kütüphaneler ile yapılmalı.
+
+5. Cache her zaman projeye dahil edilmeli.
+
+6. Controller içinde KESİNLİKLE algoritma/iş operasyonu YAPILMAZ!.
+
+7. Mimarisel tasarımlar kullanılmalı.
