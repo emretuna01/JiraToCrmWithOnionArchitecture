@@ -31,9 +31,12 @@ Onion Architecture
     2-Application => Bu katman Domain katmanı ile uygulamnın iş katmanı arasında bir 
     				 soyutlama katmanıdır. Bir servis oluşturmadan önce o servisin kurallarını 
     				 interface'ler ile belirliyoruz. Gerçek servislerin soyutlamaların yapılacağı 
-    				 katman. (Interface(IRepository,UnitOfWork,Abstract Class), Response Objecti DTO Object, Mapping, Request Parameters Object,Validations.)
+    				 katman. (Interface(IRepository,UnitOfWork,Abstract Class), Response Objecti DTO Object, Mapping, Request Parameters Object,Validations, Custom Exception.) Uygulamanın genelinde kullanılan katmanları applicationda tanımlanır. 
 
-    3-
+Application ve Domain katmanları Core katmanları olarak geçer. Appliacation katmanı, Domain katmanını
+referans alır.
+
+	3-
 
 
 
