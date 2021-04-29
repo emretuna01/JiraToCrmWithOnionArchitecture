@@ -13,3 +13,15 @@ olmayabilir.
 6. Controller içinde KESİNLİKLE algoritma/iş operasyonu YAPILMAZ!.
 
 7. Mimarisel tasarımlar kullanılmalı.
+
+----------------------------------------
+----------------------------------------
+
+Onion Architecture
+
+1. Entityler en iç katman olan domain katmanında tanımlanır.
+2. Dış katman iç katmanlara erişebilir. İç katman dışa aktarım yapamaz.
+3. Dış katman müümküm mertebe bir önceki katmandan almaya çalışır ama şart değil, en içteki 
+   katmandan almaya çalışıyor.
+
+   
