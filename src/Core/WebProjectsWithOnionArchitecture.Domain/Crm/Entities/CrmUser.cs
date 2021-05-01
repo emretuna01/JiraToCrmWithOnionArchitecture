@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace WebProjectsWithOnionArchitecture.Domain.Crm.Entities
 {
-    class CrmAccounts
+    public class CrmUser
     {
+        public string UserName { get; set; }
+        public string Password { get; set; }
     }
 }

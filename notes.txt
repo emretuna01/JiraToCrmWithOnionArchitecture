@@ -45,7 +45,11 @@ referans alır.
 
 Yatay düzlemler birbirini referans alabilir. Dıştaki katmanlar içtekileri referans alabilir. içteki katman dıştakini referans alamaz.
 
+------------->
 
+.net notları
+
+-> açılan klasörler sanaldır gerçek klasör altına class gelene kadar oluşmaz
 
 
 
