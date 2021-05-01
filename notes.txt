@@ -39,11 +39,11 @@ referans alır.
 	3-Persistance => Applicationdakiş interfacelerin, abstract classların implemente edildiği katmandır.
 					 Bu katmanda gerçek implamantasyonlar/servisler burada tanımlanır. Data odaklı servisler bu katmanda tanımlanır. Domain ile ilişkisi olan işlemler burada tanımlanır. (DbContext, Migration, Seeding, İnterface İmplemantation, UnitOfWork,Repository)
     
-    3.1-Infrastructure => Sisteme eklenecek dış yapılanmalarla etkileme girecek classlar bu katmana dahil edelicek. Domain alanı dışında kalan işlemler bu katmanda yapılır. (E-mail,Notification, Tckimlk Doprulama, Ödeme)
+    3.1-Infrastructure => Sisteme eklenecek dış yapılanmalarla etkileme girecek classlar bu katmana dahil edelicek. Domain alanı dışında kalan işlemler bu katmanda yapılır. (E-mail,Notification, Tckimlk Doprulama, Ödeme) Test katmanı infrastructure içine konabilir.
 
     3.2-Presantation => Sunum yapıldığı katman.
 
-Yatay düzlemler birbirini referans alabilir. Dıştaki katmanlar içtekileri referans alabilir ancak mümkün mertebe minumumda tutulmalı. içteki katman dıştakini referans alamaz 
+Yatay düzlemler birbirini referans alabilir. Dıştaki katmanlar içtekileri referans alabilir eğer yanal olarak referans almak gerekiyorsa ortal bir alt katman oluşturulur Infra. ve Persistance bu katmandan referans alsın. içteki katman dıştakini referans alamaz 
 
 ------------->
 
