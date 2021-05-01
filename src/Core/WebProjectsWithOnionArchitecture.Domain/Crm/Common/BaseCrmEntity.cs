@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebProjectsWithOnionArchitecture.Domain.Crm.Common
 {
-    class BaseCrmEntity
+    public class BaseCrmEntity
     {
     }
 }

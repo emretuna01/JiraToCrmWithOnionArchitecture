@@ -4,4 +4,15 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Crm\Dtos\" />
+    <Folder Include="Crm\Exceptions\" />
+    <Folder Include="Crm\Interfaces\" />
+    <Folder Include="Crm\RequestParameter\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebProjectsWithOnionArchitecture.Domain\WebProjectsWithOnionArchitecture.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

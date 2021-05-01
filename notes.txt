@@ -26,12 +26,12 @@ Onion Architecture
 4. Onion architecture bağımlılıkta tercih hakkı kullanmanı sağlar.
 5. Onion Katmanları;
 	1-Domain => Mimarinin merkezi katmanıdır. Tüm uygulama için olan Domain entitylerini
-			    bu katmanda oluşturulacaktır.
+			    bu katmanda oluşturulacaktır. Domainde operasyon olmaz.
     
     2-Application => Bu katman Domain katmanı ile uygulamnın iş katmanı arasında bir 
     				 soyutlama katmanıdır. Bir servis oluşturmadan önce o servisin kurallarını 
     				 interface'ler ile belirliyoruz. Gerçek servislerin soyutlamaların yapılacağı 
-    				 katman. (Interface(IRepository,UnitOfWork,Abstract Class), Response Objecti DTO Object, Mapping, Request Parameters Object,Validations, Custom Exception.) Uygulamanın genelinde kullanılan katmanları applicationda tanımlanır. 
+    				 katman. (Interface(IRepository,UnitOfWork,Abstract Class), Response Objecti DTO Object, Mapping, Request Parameters Object,Validations, Custom Exception.) Uygulamanın genelinde kullanılan katmanları applicationda tanımlanır. Kuralların uygulandığı yerdir. Sorumluluk üstlenmeyen objeler applicationda kullanılır. 
 
 Application ve Domain katmanları Core katmanları olarak geçer. Appliacation katmanı, Domain katmanını
 referans alır.

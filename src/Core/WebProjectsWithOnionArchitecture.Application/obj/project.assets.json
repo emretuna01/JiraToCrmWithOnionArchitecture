@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "WebProjectsWithOnionArchitecture.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/WebProjectsWithOnionArchitecture.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebProjectsWithOnionArchitecture.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "WebProjectsWithOnionArchitecture.Domain/1.0.0": {
+      "type": "project",
+      "path": "../WebProjectsWithOnionArchitecture.Domain/WebProjectsWithOnionArchitecture.Domain.csproj",
+      "msbuildProject": "../WebProjectsWithOnionArchitecture.Domain/WebProjectsWithOnionArchitecture.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "WebProjectsWithOnionArchitecture.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Emre\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Emre\\source\\repos\\emretuna01\\WebProjectsWithOnionArchitecture\\src\\Core\\WebProjectsWithOnionArchitecture.Domain\\WebProjectsWithOnionArchitecture.Domain.csproj": {
+              "projectPath": "C:\\Users\\Emre\\source\\repos\\emretuna01\\WebProjectsWithOnionArchitecture\\src\\Core\\WebProjectsWithOnionArchitecture.Domain\\WebProjectsWithOnionArchitecture.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
