@@ -43,7 +43,7 @@ referans alır.
 
     3.2-Presantation => Sunum yapıldığı katman.
 
-Yatay düzlemler birbirini referans alabilir. Dıştaki katmanlar içtekileri referans alabilir. içteki katman dıştakini referans alamaz.
+Yatay düzlemler birbirini referans alabilir. Dıştaki katmanlar içtekileri referans alabilir ancak mümkün mertebe minumumda tutulmalı. içteki katman dıştakini referans alamaz 
 
 ------------->
 

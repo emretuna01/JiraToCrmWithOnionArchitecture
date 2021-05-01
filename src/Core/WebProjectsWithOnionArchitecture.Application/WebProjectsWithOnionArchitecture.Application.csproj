@@ -8,7 +8,7 @@
     <Folder Include="Crm\Dtos\" />
     <Folder Include="Crm\Exceptions\" />
     <Folder Include="Crm\Interfaces\" />
-    <Folder Include="Crm\RequestParameter\" />
+    <Folder Include="Crm\RequestParameters\" />
   </ItemGroup>
 
   <ItemGroup>
