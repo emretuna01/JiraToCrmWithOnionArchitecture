@@ -50,7 +50,11 @@ Yatay düzlemler birbirini referans alabilir. Dıştaki katmanlar içtekileri re
 .net notları
 
 -> açılan klasörler sanaldır gerçek klasör altına class gelene kadar oluşmaz
+-> her bir entityin repositorysi olur
 
+------------>Öğrenilecek Konular
+Reporsitory Design Patern
+asenkron programlama a.dan z.ye öğren
 
 
 
