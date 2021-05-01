@@ -10,6 +10,10 @@ namespace WebProjectsWithOnionArchitecture.Persist.DbContext
 {
     public class ApplicationDbContext : Microsoft.EntityFrameworkCore.DbContext, IApplicationDbContext
     {
+        public ApplicationDbContext(DbContextOptions dbContextOptions):base(dbContextOptions)
+        {
+
+        }
         public DbSet<object> Crm { get ; set; }
     }
 }
