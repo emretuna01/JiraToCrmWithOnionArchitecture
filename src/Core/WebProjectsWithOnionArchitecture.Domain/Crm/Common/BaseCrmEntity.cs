@@ -8,5 +8,7 @@ namespace WebProjectsWithOnionArchitecture.Domain.Crm.Common
 {
     public class BaseCrmEntity
     {
+        public Guid Guid { get; set; }
+
     }
 }

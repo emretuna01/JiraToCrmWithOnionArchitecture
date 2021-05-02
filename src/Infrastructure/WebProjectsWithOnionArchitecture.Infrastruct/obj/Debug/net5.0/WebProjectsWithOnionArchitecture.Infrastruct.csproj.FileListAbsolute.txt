@@ -1,0 +1,11 @@
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.deps.json
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.dll
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\ref\WebProjectsWithOnionArchitecture.Infrastruct.dll
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.pdb
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.AssemblyInfoInputs.cache
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.AssemblyInfo.cs
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.csproj.CoreCompileInputs.cache
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.dll
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\ref\WebProjectsWithOnionArchitecture.Infrastruct.dll
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.pdb

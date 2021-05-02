@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbContext;
+using WebProjectsWithOnionArchitecture.Domain.Crm.Entities;
 
 namespace WebProjectsWithOnionArchitecture.Persist.DbContext
 {
@@ -18,6 +19,7 @@ namespace WebProjectsWithOnionArchitecture.Persist.DbContext
         {
 
         }
-        public DbSet<object> Crm { get ; set; }
+        public DbSet<CrmUser> CrmUser { get ; set; }
+        
     }
 }

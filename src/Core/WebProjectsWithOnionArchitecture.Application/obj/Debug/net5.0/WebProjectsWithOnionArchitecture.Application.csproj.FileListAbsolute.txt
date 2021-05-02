@@ -9,3 +9,7 @@ C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\WebProjectsWithOnionArchitecture.Application\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Application.dll
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\WebProjectsWithOnionArchitecture.Application\obj\Debug\net5.0\ref\WebProjectsWithOnionArchitecture.Application.dll
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\WebProjectsWithOnionArchitecture.Application\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Application.pdb
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\WebProjectsWithOnionArchitecture.Application\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Domain.dll
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\WebProjectsWithOnionArchitecture.Application\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Domain.pdb
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\WebProjectsWithOnionArchitecture.Application\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Application.csprojAssemblyReference.cache
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\WebProjectsWithOnionArchitecture.Application\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Application.csproj.CopyComplete
