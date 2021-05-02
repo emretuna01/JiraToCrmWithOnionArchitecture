@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\WebProjectsWithOnionArchitecture.Application\WebProjectsWithOnionArchitecture.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\WebProjectsWithOnionArchitecture.Persist\WebProjectsWithOnionArchitecture.Persist.csproj" />
+  </ItemGroup>
+
 </Project>

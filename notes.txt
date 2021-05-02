@@ -56,6 +56,8 @@ Yatay düzlemler birbirini referans alabilir. Dıştaki katmanlar içtekileri re
 Reporsitory Design Patern
 asenkron programlama a.dan z.ye öğren
 unitofwork öğren
+extension method in asp.core öğren
+reflection tasarımını öğrenilecek
 
 
 
