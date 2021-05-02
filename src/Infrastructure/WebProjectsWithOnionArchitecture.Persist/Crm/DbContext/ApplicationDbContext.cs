@@ -10,6 +10,10 @@ namespace WebProjectsWithOnionArchitecture.Persist.DbContext
 {
     public class ApplicationDbContext : Microsoft.EntityFrameworkCore.DbContext, IApplicationDbContext
     {
+        /// <summary>
+        /// Orm aracındaki contexttir. Arayüzü application katmanındadır
+        /// </summary>
+        /// <param name="dbContextOptions"></param>
         public ApplicationDbContext(DbContextOptions dbContextOptions):base(dbContextOptions)
         {
 

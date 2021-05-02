@@ -58,6 +58,7 @@ asenkron programlama a.dan z.ye öğren
 unitofwork öğren
 extension method in asp.core öğren
 reflection tasarımını öğrenilecek
+decorator design patern bak
 
 
 
