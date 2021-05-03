@@ -7,7 +7,7 @@ using WebProjectsWithOnionArchitecture.Domain.Crm.Entities;
 
 namespace WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository
 {
-    public interface ICrmTask :IDbRepository<CrmTask>
+    public interface ICrmSalesOrderRepository : IDbRepository<CrmSalesOrder>
     {
     }
 }

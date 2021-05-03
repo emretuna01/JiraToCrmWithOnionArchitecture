@@ -10,7 +10,7 @@ using WebProjectsWithOnionArchitecture.Persist.DbContext;
 
 namespace WebProjectsWithOnionArchitecture.Persist.Crm.DbRepositories
 {
-    public class CrmTaskRepository : DbRepository<CrmTask>, ICrmTask
+    public class CrmTaskRepository : DbRepository<CrmTask>, ICrmTaskRepository
     {
         public CrmTaskRepository(ApplicationDbContext applicationDbContext) : base(applicationDbContext)
         {
