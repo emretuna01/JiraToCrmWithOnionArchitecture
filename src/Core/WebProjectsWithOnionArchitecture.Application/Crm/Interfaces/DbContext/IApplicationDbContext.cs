@@ -14,6 +14,8 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbContext
     public interface IApplicationDbContext
     {
         public DbSet<CrmUser> CrmUser { get; set; }
+        public DbSet<CrmTask> CrmTask { get; set; }
+        public DbSet<CrmAccount> CrmAccount { get; set; }
 
     }
 }
