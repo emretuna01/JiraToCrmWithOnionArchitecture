@@ -23,8 +23,17 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
             serviceCollection.AddControllers();
         }
 
-        public void Configure(IApplicationBuilder applicationBuilder,IWebHostEnvironment webHostEnvironment)
+        public void Configure(IApplicationBuilder applicationBuilder)
         {
+
+            applicationBuilder.UseRouting();
+
+            applicationBuilder.UseAuthorization();
+
+            applicationBuilder.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
 
         }
 
