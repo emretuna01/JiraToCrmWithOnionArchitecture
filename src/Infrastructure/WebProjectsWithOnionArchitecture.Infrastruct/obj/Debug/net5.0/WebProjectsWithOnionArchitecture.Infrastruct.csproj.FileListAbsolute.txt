@@ -19,3 +19,4 @@ C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infra
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\scopedcss\bundle\WebProjectsWithOnionArchitecture.Infrastruct.styles.css
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.RazorTargetAssemblyInfo.cache
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.genruntimeconfig.cache
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\appsettings.json
