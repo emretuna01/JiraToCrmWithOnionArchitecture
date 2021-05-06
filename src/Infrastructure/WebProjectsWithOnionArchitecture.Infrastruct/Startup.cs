@@ -37,26 +37,13 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
                 endpoints.MapControllers();
             });
 
-            MyClass myClass = new MyClass();
-            applicationBuilder.Run(context => {
-                return context.Response.WriteAsync(myClass.test.GetChildren().ToList().ToString());                 
-
-            });
+   
         }
 
     }
 
-    public class MyClass
-    {
 
-        public IConfiguration test = new ConfigurationBuilder()
-             .SetBasePath(Path.Combine(Directory.GetCurrentDirectory()))
-             .AddJsonFile("appsettings.json")
-             .Build();
-
-
-
-    }
+    
 
 
 }
