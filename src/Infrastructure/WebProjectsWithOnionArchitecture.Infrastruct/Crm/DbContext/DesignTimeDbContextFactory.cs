@@ -10,13 +10,16 @@ using WebProjectsWithOnionArchitecture.Persist.DbContext;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.Crm.DbContext
 {
-    public class DesignTimeDbContextFactory<TContext> : IDesignTimeDbContextFactory<TContext> where TContext : ApplicationDbContext
+    public abstract class DesignTimeDbContextFactory<TContext> : IDesignTimeDbContextFactory<TContext> where TContext : ApplicationDbContext
     {
+        protected abstract TContext CreateNewInstance(DbContextOptions<TContext> dbContextOptions);
+
         public TContext CreateDbContext(string[] args)
         {
             DbContextOptionsBuilder<TContext> dbContextOptionsBuilder = new DbContextOptionsBuilder<TContext>();
             IConfiguration configuration = new ConfigurationBuilder().SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../WebProjectsWithOnionArchitecture.Persist")).AddJsonFile("appsettings.json").Build();
             dbContextOptionsBuilder.UseSqlite(configuration.GetConnectionString("SqlLite"));
+            return CreateNewInstance(dbContextOptionsBuilder.Options);
         }
     }
 }
