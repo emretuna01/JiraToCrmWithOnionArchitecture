@@ -53,3 +53,5 @@ C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infra
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Application.pdb
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Domain.pdb
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.csproj.CopyComplete
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll

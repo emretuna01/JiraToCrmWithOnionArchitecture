@@ -17,8 +17,8 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Crm.DbContext
         public TContext CreateDbContext(string[] args)
         {
             DbContextOptionsBuilder<TContext> dbContextOptionsBuilder = new DbContextOptionsBuilder<TContext>();
-            IConfiguration configuration = new ConfigurationBuilder().SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../WebProjectsWithOnionArchitecture.Persist")).AddJsonFile("appsettings.json").Build();
-            dbContextOptionsBuilder.UseSqlite(configuration.GetConnectionString("SqlLite"));
+            IConfiguration configuration = new ConfigurationBuilder().SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../WebProjectsWithOnionArchitecture.Infrastruct")).AddJsonFile("appsettings.json").Build();
+            dbContextOptionsBuilder.UseSqlite(configuration.GetConnectionString("SqlLite"),p=>p.MigrationsAssembly("WebProjectsWithOnionArchitecture.Infrastruct"));
             return CreateNewInstance(dbContextOptionsBuilder.Options);
         }
     }
