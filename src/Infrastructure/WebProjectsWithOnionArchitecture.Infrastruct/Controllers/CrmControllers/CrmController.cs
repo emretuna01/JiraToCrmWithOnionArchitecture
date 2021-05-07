@@ -5,12 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebProjectsWithOnionArchitecture.Present.Controllers
+namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmControllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class CrmController : ControllerBase
     {
-
     }
 }

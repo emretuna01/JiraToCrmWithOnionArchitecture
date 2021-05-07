@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Persist.DbContext;
 
-namespace WebProjectsWithOnionArchitecture.Infrastruct.Crm.DbContext
+namespace WebProjectsWithOnionArchitecture.Infrastruct.DbContext.Crm
 {
     public abstract class DesignTimeDbContextFactory<TContext> : IDesignTimeDbContextFactory<TContext> where TContext : ApplicationDbContext
     {
