@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using WebProjectsWithOnionArchitecture.Application;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct
 {
@@ -23,6 +24,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
         public void ConfigureServices(IServiceCollection serviceCollection)
         {
             serviceCollection.AddControllers();
+            serviceCollection.AddApplicationServices();
         }
 
         public void Configure(IApplicationBuilder applicationBuilder)
