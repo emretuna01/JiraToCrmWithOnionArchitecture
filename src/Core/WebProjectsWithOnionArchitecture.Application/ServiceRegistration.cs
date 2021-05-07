@@ -11,7 +11,7 @@ namespace WebProjectsWithOnionArchitecture.Application
     public static class ServiceRegistration
     {
 
-        public static void AddApplicationServices(this IServiceCollection serviceCollection)
+        public static void AddApplicationService(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<GetCrmWhoAmIHandler>();
         }
