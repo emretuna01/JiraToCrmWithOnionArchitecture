@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Application.Crm.Feature.Queries.GetCrmWhoAmI;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI;
 
 namespace WebProjectsWithOnionArchitecture.Application
 {
     public static class ServiceRegistration
     {
 
-        public static void AddApplicationService(this IServiceCollection serviceCollection)
+        public static void AddApplicationServices(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<GetCrmWhoAmIHandler>();
         }

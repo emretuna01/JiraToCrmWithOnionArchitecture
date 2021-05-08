@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Application.Crm.Feature.Queries.GetCrmWhoAmI;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmControllers
 {
@@ -12,17 +12,18 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
     [ApiController]
     public class CrmController : ControllerBase
     {
-        GetCrmWhoAmIHandler _getCrmWhoAmIHandler;
+        readonly GetCrmWhoAmIHandler _getCrmWhoAmIHandler;
 
         public CrmController(GetCrmWhoAmIHandler getCrmWhoAmIHandler)
         {
             _getCrmWhoAmIHandler = getCrmWhoAmIHandler;
         }
 
-        public async Task<List<GetCrmWhoAmIResponse>> Get()
+        public async Task<GetCrmWhoAmIResponse> CrmWhoAmI(GetCrmWhoAmIRequest getCrmWhoIAmRequest)
         {
-            List<GetCrmWhoAmIResponse> getCrmWhoAmIResponses= await _getCrmWhoAmIHandler.GetWhoAmI(new GetCrmWhoAmIRequest());
-            return getCrmWhoAmIResponses;
+            return await _getCrmWhoAmIHandler.GetWhoAmI(getCrmWhoIAmRequest);
         }
+
+
     }
 }

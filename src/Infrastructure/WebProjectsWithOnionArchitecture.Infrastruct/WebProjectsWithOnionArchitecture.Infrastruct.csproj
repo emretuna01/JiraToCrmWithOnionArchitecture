@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\WebProjectsWithOnionArchitecture.Application\WebProjectsWithOnionArchitecture.Application.csproj" />
     <ProjectReference Include="..\WebProjectsWithOnionArchitecture.Persist\WebProjectsWithOnionArchitecture.Persist.csproj" />
   </ItemGroup>
 

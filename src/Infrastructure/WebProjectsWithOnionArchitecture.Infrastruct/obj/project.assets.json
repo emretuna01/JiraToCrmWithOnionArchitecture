@@ -1363,6 +1363,7 @@
       "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.5",
       "Microsoft.Extensions.Configuration.Json >= 5.0.0",
+      "WebProjectsWithOnionArchitecture.Application >= 1.0.0",
       "WebProjectsWithOnionArchitecture.Persist >= 1.0.0"
     ]
   },
@@ -1393,6 +1394,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\Emre\\source\\repos\\emretuna01\\WebProjectsWithOnionArchitecture\\src\\Core\\WebProjectsWithOnionArchitecture.Application\\WebProjectsWithOnionArchitecture.Application.csproj": {
+              "projectPath": "C:\\Users\\Emre\\source\\repos\\emretuna01\\WebProjectsWithOnionArchitecture\\src\\Core\\WebProjectsWithOnionArchitecture.Application\\WebProjectsWithOnionArchitecture.Application.csproj"
+            },
             "C:\\Users\\Emre\\source\\repos\\emretuna01\\WebProjectsWithOnionArchitecture\\src\\Infrastructure\\WebProjectsWithOnionArchitecture.Persist\\WebProjectsWithOnionArchitecture.Persist.csproj": {
               "projectPath": "C:\\Users\\Emre\\source\\repos\\emretuna01\\WebProjectsWithOnionArchitecture\\src\\Infrastructure\\WebProjectsWithOnionArchitecture.Persist\\WebProjectsWithOnionArchitecture.Persist.csproj"
             }
