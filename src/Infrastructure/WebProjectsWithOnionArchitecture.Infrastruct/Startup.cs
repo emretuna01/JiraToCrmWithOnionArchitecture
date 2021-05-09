@@ -9,6 +9,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI;
+using WebProjectsWithOnionArchitecture.Persist;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct
 {
@@ -23,14 +25,15 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
 
         public void ConfigureServices(IServiceCollection serviceCollection)
         {
+            serviceCollection.AddPersistanceServices();
+            serviceCollection.AddApplicationServices();                       
             serviceCollection.AddControllers();
-            serviceCollection.AddApplicationServices();
         }
 
         public void Configure(IApplicationBuilder applicationBuilder)
         {
 
-            applicationBuilder.UseRouting();
+            applicationBuilder.UseRouting();           
 
             applicationBuilder.UseAuthorization();
 

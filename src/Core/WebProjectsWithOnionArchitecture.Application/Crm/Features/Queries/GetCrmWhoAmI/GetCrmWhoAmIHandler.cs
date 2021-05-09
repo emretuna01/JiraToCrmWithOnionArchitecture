@@ -9,7 +9,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetC
 {
     public class GetCrmWhoAmIHandler
     {
-        readonly ICrmUserRepository _crmUserRepository;
+        public readonly ICrmUserRepository _crmUserRepository;
 
         public GetCrmWhoAmIHandler(ICrmUserRepository crmUserRepository)
         {

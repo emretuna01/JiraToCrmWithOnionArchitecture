@@ -13,6 +13,10 @@ namespace WebProjectsWithOnionArchitecture.Persist.Crm.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         readonly ApplicationDbContext _applicationDbContext;
+        public ICrmUserRepository CrmUserRepository { get; }
+        public ICrmAccountRepository CrmAccountRepository { get; }
+        public ICrmTaskRepository CrmTaskRepository { get; }
+        public ICrmSalesOrderRepository CrmSalesOrderRepository { get; }
 
         public UnitOfWork(ApplicationDbContext applicationDbContext, 
                           ICrmUserRepository crmUserRepository, 
@@ -27,12 +31,7 @@ namespace WebProjectsWithOnionArchitecture.Persist.Crm.UnitOfWork
             CrmSalesOrderRepository = crmSalesOrderRepository;
 
         }
-
-        public ICrmUserRepository CrmUserRepository { get; }
-        public ICrmAccountRepository CrmAccountRepository { get; }
-        public ICrmTaskRepository CrmTaskRepository { get; }
-        public ICrmSalesOrderRepository CrmSalesOrderRepository { get; }
-
+        
         public async Task<IDbContextTransaction> BeginTransactionAsync()
         {
             return await _applicationDbContext.Database.BeginTransactionAsync();

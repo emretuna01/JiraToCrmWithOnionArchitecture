@@ -9,17 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{8BE5CFD1-9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebProjectsWithOnionArchitecture.Domain", "src\Core\WebProjectsWithOnionArchitecture.Domain\WebProjectsWithOnionArchitecture.Domain.csproj", "{6B7A2430-5AC9-47CA-A8C7-2ABDE682781B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProjectsWithOnionArchitecture.Application", "src\Core\WebProjectsWithOnionArchitecture.Application\WebProjectsWithOnionArchitecture.Application.csproj", "{8C9294DA-DCD0-48AC-A90C-7E7E2FF03A4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebProjectsWithOnionArchitecture.Application", "src\Core\WebProjectsWithOnionArchitecture.Application\WebProjectsWithOnionArchitecture.Application.csproj", "{8C9294DA-DCD0-48AC-A90C-7E7E2FF03A4D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{38D2BB4B-2432-4F37-8982-722494D58258}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProjectsWithOnionArchitecture.Infrastruct", "src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\WebProjectsWithOnionArchitecture.Infrastruct.csproj", "{CF5F242E-AE30-4FD9-98C9-AF39453789C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebProjectsWithOnionArchitecture.Infrastruct", "src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\WebProjectsWithOnionArchitecture.Infrastruct.csproj", "{CF5F242E-AE30-4FD9-98C9-AF39453789C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProjectsWithOnionArchitecture.Persist", "src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\WebProjectsWithOnionArchitecture.Persist.csproj", "{17D7D63F-2725-43E6-8783-F0A241E4C4F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebProjectsWithOnionArchitecture.Persist", "src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\WebProjectsWithOnionArchitecture.Persist.csproj", "{17D7D63F-2725-43E6-8783-F0A241E4C4F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{EFFF6B2C-2B7E-4F7D-BCB1-CC546F3BED08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProjectsWithOnionArchitecture.Present", "src\Presentation\WebProjectsWithOnionArchitecture.Present\WebProjectsWithOnionArchitecture.Present.csproj", "{432C8E7F-9330-4F21-9670-F670F9D7DBC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebProjectsWithOnionArchitecture.Present", "src\Presentation\WebProjectsWithOnionArchitecture.Present\WebProjectsWithOnionArchitecture.Present.csproj", "{432C8E7F-9330-4F21-9670-F670F9D7DBC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

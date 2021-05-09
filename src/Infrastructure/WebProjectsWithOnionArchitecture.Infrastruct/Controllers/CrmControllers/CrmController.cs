@@ -12,15 +12,16 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
     [ApiController]
     public class CrmController : ControllerBase
     {
-        readonly GetCrmWhoAmIHandler _getCrmWhoAmIHandler;
+        public readonly GetCrmWhoAmIHandler _getCrmWhoAmIHandler;
 
         public CrmController(GetCrmWhoAmIHandler getCrmWhoAmIHandler)
         {
             _getCrmWhoAmIHandler = getCrmWhoAmIHandler;
         }
-
-        public async Task<GetCrmWhoAmIResponse> CrmWhoAmI(GetCrmWhoAmIRequest getCrmWhoIAmRequest)
+        [HttpGet]
+        public async Task<GetCrmWhoAmIResponse> CrmWhoAmI()
         {
+            GetCrmWhoAmIRequest getCrmWhoIAmRequest = new GetCrmWhoAmIRequest();
             return await _getCrmWhoAmIHandler.GetWhoAmI(getCrmWhoIAmRequest);
         }
 

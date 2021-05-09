@@ -14,6 +14,7 @@ namespace WebProjectsWithOnionArchitecture.Application
         public static void AddApplicationServices(this IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<GetCrmWhoAmIHandler>();
+            
         }
     }
 }
