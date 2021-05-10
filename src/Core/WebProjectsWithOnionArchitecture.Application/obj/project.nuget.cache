@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OeOw/uJONNihHtMLybMQrTREW1e/QWQwjXeVC2JLyKrg/hw4ZTpg5tCt5zLt/iciltQlylu2CJypBGGKiI1ATg==",
+  "dgSpecHash": "/QjfwAxj2rEFjLTjx5GcFwGDStw3KLoCj9FI9pkp5gD2dv6x9FzrcqmSy1JGRLZhgO9xY5YhxubJA6+mXqZPcA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Emre\\source\\repos\\emretuna01\\WebProjectsWithOnionArchitecture\\src\\Core\\WebProjectsWithOnionArchitecture.Application\\WebProjectsWithOnionArchitecture.Application.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\Emre\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
