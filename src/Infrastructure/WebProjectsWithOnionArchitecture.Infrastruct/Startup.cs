@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI;
+using WebProjectsWithOnionArchitecture.Domain;
 using WebProjectsWithOnionArchitecture.Persist;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct
@@ -25,7 +26,8 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
 
         public void ConfigureServices(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddPersistanceServices();
+            serviceCollection.AddDomainServices();
+            serviceCollection.AddPersistanceServices(Configuration);
             serviceCollection.AddApplicationServices();                       
             serviceCollection.AddControllers();
         }

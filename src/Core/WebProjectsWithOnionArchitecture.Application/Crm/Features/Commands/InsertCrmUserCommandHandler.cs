@@ -12,13 +12,14 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands
     public class InsertCrmUserCommandHandler
     {
         readonly ICrmUserRepository _crmUserRepository;
-        private CrmUser _crmUser;        
-        private InsertCrmUserCommandResponse _insertCrmUserCommandResponse { get { return new InsertCrmUserCommandResponse(); } }
+        private CrmUser _crmUser;
+        private InsertCrmUserCommandResponse _insertCrmUserCommandResponse;
 
-        public InsertCrmUserCommandHandler(ICrmUserRepository  crmUserRepository,CrmUser crmUser)
+        public InsertCrmUserCommandHandler(ICrmUserRepository  crmUserRepository,CrmUser crmUser, InsertCrmUserCommandResponse insertCrmUserCommandResponse)
         {
             _crmUserRepository = crmUserRepository;
             _crmUser = crmUser;
+            _insertCrmUserCommandResponse = insertCrmUserCommandResponse;
         }
 
         public async Task<InsertCrmUserCommandResponse> AddToDb(InsertCrmUserCommandRequest insertCrmUserCommandRequest)
@@ -29,7 +30,11 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands
 
              var count= await _crmUserRepository.AddAsync(_crmUser);
 
-            _insertCrmUserCommandResponse.Message = count.ToString() + EnumHolders.ResponseMessages.AddedSuccessfully.ToString();
+            var test1 = count.ToString();
+            var test2 = EnumHolders.ResponseMessages.AddedSuccessfully.ToString();
+            var test = test1 + test2;
+
+            _insertCrmUserCommandResponse.Message = count.ToString() +" "+ EnumHolders.ResponseMessages.AddedSuccessfully.ToString();
             _insertCrmUserCommandResponse.IsSuccessfull = count >= 0 ? EnumHolders.ResponseStatus.True.ToString() : EnumHolders.ResponseStatus.False.ToString();
 
             return _insertCrmUserCommandResponse;

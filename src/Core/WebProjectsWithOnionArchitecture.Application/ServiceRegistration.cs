@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI;
 
 namespace WebProjectsWithOnionArchitecture.Application
@@ -13,8 +14,11 @@ namespace WebProjectsWithOnionArchitecture.Application
 
         public static void AddApplicationServices(this IServiceCollection serviceCollection)
         {
+            //MediatR library will be added here.
             serviceCollection.AddTransient<GetCrmWhoAmIHandler>();
-            
+            serviceCollection.AddTransient<InsertCrmUserCommandHandler>();
+            serviceCollection.AddTransient<InsertCrmUserCommandResponse>();
+
         }
     }
 }

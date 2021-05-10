@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Sqlite;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,9 @@ namespace WebProjectsWithOnionArchitecture.Persist
 {
     public static class ServiceRegistration
     {
-        public static void AddPersistanceServices(this IServiceCollection serviceCollection)
+        public static void AddPersistanceServices(this IServiceCollection serviceCollection, IConfiguration configuration)
         {
-            serviceCollection.AddDbContext<ApplicationDbContext>(dbContextOptions => dbContextOptions.UseSqlite());
+            serviceCollection.AddDbContext<ApplicationDbContext>(dbContextOptions => dbContextOptions.UseSqlite(configuration.GetConnectionString("SqlLite")));
             serviceCollection.AddTransient<ICrmUserRepository, CrmUserRepository>();
         }
 

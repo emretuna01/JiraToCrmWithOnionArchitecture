@@ -71,7 +71,19 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("BusinessUnitId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OdataContext")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OrganizationId")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Password")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserName")

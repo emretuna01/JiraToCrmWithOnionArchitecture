@@ -150,6 +150,7 @@
       },
       "WebProjectsWithOnionArchitecture.Domain/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
