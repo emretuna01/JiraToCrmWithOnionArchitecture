@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "aTozXcNBhAAVm6bsVgAJgvDJko6eovXCEwaNktzGuo6nbJ6l1gcZ9p6chsYturkJLEkQk/tG78yihwtVFjcxSA==",
+  "dgSpecHash": "Rlpj7yLOq7iinXMZeVREKc5dJtAp1e8jmqwxJ4Bf8Nlwl9OByx/u9NVYMIkrUTkqhFq6XbiSYKH2QO3YLUirBQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Emre\\source\\repos\\emretuna01\\WebProjectsWithOnionArchitecture\\src\\Core\\WebProjectsWithOnionArchitecture.Domain\\WebProjectsWithOnionArchitecture.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Emre\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

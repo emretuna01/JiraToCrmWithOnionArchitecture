@@ -19,11 +19,13 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
             _getCrmWhoAmIHandler = getCrmWhoAmIHandler;
         }
         [HttpGet]
+        /*
         public async Task<GetCrmWhoAmIResponse> CrmWhoAmI()
         {
             GetCrmWhoAmIRequest getCrmWhoIAmRequest = new GetCrmWhoAmIRequest();
             return await _getCrmWhoAmIHandler.GetWhoAmI(getCrmWhoIAmRequest);
         }
+        */
 
 
     }

@@ -12,7 +12,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbReposito
         Task<List<T>> GetAsync();
         Task<List<T>> GetWhere(Func<T, bool> method);
         Task<T> GetByIdAsync(Guid id);
-        Task<T> AddAsync(T type);
+        Task<int> AddAsync(T type);
         
     }
 }

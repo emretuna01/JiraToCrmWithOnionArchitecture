@@ -15,11 +15,18 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetC
         {
             _crmUserRepository = crmUserRepository;
         }
-
+        /*
         public async Task<GetCrmWhoAmIResponse> GetWhoAmI(GetCrmWhoAmIRequest getCrmWhoAmIRequest)
         {
             var crmUser = await _crmUserRepository.GetAsync();
             return (GetCrmWhoAmIResponse)crmUser.Select(p => new GetCrmWhoAmIResponse { UserName = p.UserName, Password = p.Password });
         }
+        public async void AddToDB(GetCrmWhoAmIRequest getCrmWhoAmIRequest)
+        {
+            _crmUserRepository.    
+            // var test= await _crmUserRepository.AddAsync(getCrmWhoAmIRequest);
+        }
+        */
+
     }
 }

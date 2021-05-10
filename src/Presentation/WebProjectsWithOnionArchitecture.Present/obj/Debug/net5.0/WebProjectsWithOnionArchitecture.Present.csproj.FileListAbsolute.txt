@@ -54,3 +54,4 @@ C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Prese
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Presentation\WebProjectsWithOnionArchitecture.Present\obj\Debug\net5.0\ref\WebProjectsWithOnionArchitecture.Present.dll
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Presentation\WebProjectsWithOnionArchitecture.Present\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Present.pdb
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Presentation\WebProjectsWithOnionArchitecture.Present\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Present.genruntimeconfig.cache
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Presentation\WebProjectsWithOnionArchitecture.Present\bin\Debug\net5.0\Newtonsoft.Json.dll

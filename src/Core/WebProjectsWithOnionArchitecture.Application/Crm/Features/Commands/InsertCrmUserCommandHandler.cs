@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Enums;
+using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository;
+using WebProjectsWithOnionArchitecture.Domain.Crm.Entities;
+
+namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands
+{
+    public class InsertCrmUserCommandHandler
+    {
+        readonly ICrmUserRepository _crmUserRepository;
+        private CrmUser _crmUser;        
+        private InsertCrmUserCommandResponse _insertCrmUserCommandResponse { get { return new InsertCrmUserCommandResponse(); } }
+
+        public InsertCrmUserCommandHandler(ICrmUserRepository  crmUserRepository,CrmUser crmUser)
+        {
+            _crmUserRepository = crmUserRepository;
+            _crmUser = crmUser;
+        }
+
+        public async Task<InsertCrmUserCommandResponse> AddToDb(InsertCrmUserCommandRequest insertCrmUserCommandRequest)
+        {
+            // automapper library will be added here
+            _crmUser.UserName = insertCrmUserCommandRequest.UserName;
+            _crmUser.Password = insertCrmUserCommandRequest.Password; 
+
+             var count= await _crmUserRepository.AddAsync(_crmUser);
+
+            _insertCrmUserCommandResponse.Message = count.ToString() + EnumHolders.ResponseMessages.AddedSuccessfully.ToString();
+            _insertCrmUserCommandResponse.IsSuccessfull = count >= 0 ? EnumHolders.ResponseStatus.True.ToString() : EnumHolders.ResponseStatus.False.ToString();
+
+            return _insertCrmUserCommandResponse;
+        }
+    }
+}

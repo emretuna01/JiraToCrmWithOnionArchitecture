@@ -19,11 +19,10 @@ namespace WebProjectsWithOnionArchitecture.Persist.Crm.Repositories
         private DbSet<T> Table { get => _applicationDbContext.Set<T>(); }
 
 
-        public async Task<T> AddAsync(T type)
+        public async Task<int> AddAsync(T type)
         {
             await Table.AddAsync(type);
-            await _applicationDbContext.SaveChangesAsync();
-            return type;
+            return await _applicationDbContext.SaveChangesAsync();
         }
 
         public Task<List<T>> GetAsync()
