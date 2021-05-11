@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.InsertCrmUser;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmControllers
@@ -15,10 +16,12 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
     {
         //mediatR library will be added here
         public readonly InsertCrmUserCommandHandler _insertCrmUserCommandHandler;
+        public readonly GetCrmUserHandler _getCrmUserHandler;
 
-        public CrmController(InsertCrmUserCommandHandler insertCrmUserCommandHandler)
+        public CrmController(InsertCrmUserCommandHandler insertCrmUserCommandHandler, GetCrmUserHandler getCrmUserHandler)
         {
             _insertCrmUserCommandHandler = insertCrmUserCommandHandler;
+            _getCrmUserHandler = getCrmUserHandler;
         }
         
         [HttpPost("addcrmuser")]       
@@ -27,8 +30,11 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
             return await _insertCrmUserCommandHandler.AddToDb(insertCrmUserCommandRequest);
         }
        
-        //[HttpGet("getcrmuser")]
-        //public async Task<>
+        [HttpGet("getcrmuser")]
+        public async Task<GetCrmUserResponse> GetCrmUserFromDbByName(string username, string password)
+        {
+
+        }
 
 
     }

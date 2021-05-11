@@ -18,7 +18,17 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetC
 
         public async Task<GetCrmUserResponse> GetCrmUserFromDb(GetCrmUserRequest getCrmUserRequest)
         {
-            return null;
+            var crmusers=await _crmUserRepository.GetCrmUserFromDbByName(getCrmUserRequest.UserName, getCrmUserRequest.Password);
+            GetCrmUserResponse getCrmUserResponse = new GetCrmUserResponse()
+            {
+                BusinessUnitId = crmusers.First().BusinessUnitId,
+                UserName = crmusers.First().UserName,
+                OdataContext = crmusers.First().OdataContext,
+                OrganizationId = crmusers.First().OrganizationId,
+                Password = crmusers.First().Password,
+                UserId = crmusers.First().UserId
+            };
+            return  getCrmUserResponse;
         }
 
     }
