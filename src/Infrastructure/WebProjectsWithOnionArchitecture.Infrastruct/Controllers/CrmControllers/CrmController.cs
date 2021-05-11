@@ -30,7 +30,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
             return await _insertCrmUserCommandHandler.AddToDb(insertCrmUserCommandRequest);
         }
        
-        [HttpGet("getcrmuser")]
+        [HttpPost("getcrmuser")]
         public async Task<GetCrmUserResponse> GetCrmUserFromDbByName(GetCrmUserRequest getCrmUserRequest)
         {
             return await _getCrmUserHandler.GetCrmUserFromDb(getCrmUserRequest);

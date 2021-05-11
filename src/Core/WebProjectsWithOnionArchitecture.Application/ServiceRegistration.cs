@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.InsertCrmUser;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI;
 
 namespace WebProjectsWithOnionArchitecture.Application
@@ -18,6 +19,8 @@ namespace WebProjectsWithOnionArchitecture.Application
             serviceCollection.AddTransient<GetCrmWhoAmIHandler>();
             serviceCollection.AddTransient<InsertCrmUserCommandHandler>();
             serviceCollection.AddTransient<InsertCrmUserCommandResponse>();
+            serviceCollection.AddTransient<GetCrmUserHandler>();
+            
 
         }
     }
