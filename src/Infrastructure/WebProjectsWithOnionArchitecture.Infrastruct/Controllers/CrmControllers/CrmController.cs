@@ -31,9 +31,9 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         }
        
         [HttpGet("getcrmuser")]
-        public async Task<GetCrmUserResponse> GetCrmUserFromDbByName(string username, string password)
+        public async Task<GetCrmUserResponse> GetCrmUserFromDbByName(GetCrmUserRequest getCrmUserRequest)
         {
-
+            return await _getCrmUserHandler.GetCrmUserFromDb(getCrmUserRequest);
         }
 
 
