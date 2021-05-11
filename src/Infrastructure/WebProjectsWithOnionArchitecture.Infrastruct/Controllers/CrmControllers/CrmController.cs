@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.InsertCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmControllers
@@ -27,6 +27,8 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
             return await _insertCrmUserCommandHandler.AddToDb(insertCrmUserCommandRequest);
         }
        
+        //[HttpGet("getcrmuser")]
+        //public async Task<>
 
 
     }

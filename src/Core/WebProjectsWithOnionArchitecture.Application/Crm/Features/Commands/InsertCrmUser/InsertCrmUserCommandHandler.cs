@@ -7,7 +7,7 @@ using WebProjectsWithOnionArchitecture.Application.Crm.Features.Enums;
 using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository;
 using WebProjectsWithOnionArchitecture.Domain.Crm.Entities;
 
-namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands
+namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.InsertCrmUser
 {
     public class InsertCrmUserCommandHandler
     {

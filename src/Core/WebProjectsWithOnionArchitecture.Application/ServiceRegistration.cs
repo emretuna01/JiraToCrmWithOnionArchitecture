@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.InsertCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI;
 
 namespace WebProjectsWithOnionArchitecture.Application

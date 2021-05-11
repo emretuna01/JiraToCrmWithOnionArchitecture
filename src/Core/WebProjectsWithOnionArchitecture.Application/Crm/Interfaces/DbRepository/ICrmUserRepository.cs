@@ -9,6 +9,6 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbReposito
 {
     public interface ICrmUserRepository:IDbRepository<CrmUser>
     {
-
+        Task<List<CrmUser>> GetCrmUserFromDbByName(string username,string password);
     }
 }

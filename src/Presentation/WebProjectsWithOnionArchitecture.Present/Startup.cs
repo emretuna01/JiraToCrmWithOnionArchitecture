@@ -28,7 +28,7 @@ namespace WebProjectsWithOnionArchitecture.Present
         public void ConfigureServices(IServiceCollection services)
         {
             
-            services.AddPersistanceServices();
+           // services.AddPersistanceServices();
             services.AddControllers();
         }
 
