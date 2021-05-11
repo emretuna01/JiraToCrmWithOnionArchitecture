@@ -19,12 +19,5 @@ namespace WebProjectsWithOnionArchitecture.Persist.Crm.DbRepositories
         {
             _applicationDbContext = applicationDbContext;
         }
-
-        private DbSet<CrmUser> crmUser { get { return _applicationDbContext.Set<CrmUser>(); } }
-
-        public async Task<List<CrmUser>> GetCrmUserFromDbByName(string username, string password)
-        {
-               return await  crmUser.ToListAsync();
-        }
     }
 }

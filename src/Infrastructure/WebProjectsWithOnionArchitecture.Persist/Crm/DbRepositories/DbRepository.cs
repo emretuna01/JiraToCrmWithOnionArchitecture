@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository;
 using WebProjectsWithOnionArchitecture.Domain.Crm.Common;
@@ -35,9 +37,9 @@ namespace WebProjectsWithOnionArchitecture.Persist.Crm.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<List<T>> GetWhere(Func<T, bool> method)
+        public async Task<List<T>> GetWhereAsync(Expression<Func<T, bool>> expression)
         {
-            throw new NotImplementedException();
+            return await Table.Where(expression).ToListAsync();
         }
     }
 }

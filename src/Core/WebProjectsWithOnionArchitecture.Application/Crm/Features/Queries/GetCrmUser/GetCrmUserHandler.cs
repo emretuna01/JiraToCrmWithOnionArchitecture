@@ -18,7 +18,9 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetC
 
         public async Task<GetCrmUserResponse> GetCrmUserFromDb(GetCrmUserRequest getCrmUserRequest)
         {
-            var crmusers=await _crmUserRepository.GetCrmUserFromDbByName(getCrmUserRequest.UserName, getCrmUserRequest.Password);
+            //count control will be added with automapper library
+
+            var crmusers =await _crmUserRepository.GetWhereAsync(p=>p.UserName.Contains(getCrmUserRequest.UserName) && p.Password.Contains(getCrmUserRequest.Password) );
             GetCrmUserResponse getCrmUserResponse = new GetCrmUserResponse()
             {
                 BusinessUnitId = crmusers.First().BusinessUnitId,

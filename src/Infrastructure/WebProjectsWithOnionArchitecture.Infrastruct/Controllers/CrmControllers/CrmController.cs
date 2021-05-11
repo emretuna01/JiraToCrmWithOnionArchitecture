@@ -35,7 +35,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         {
             return await _getCrmUserHandler.GetCrmUserFromDb(getCrmUserRequest);
         }
-
+        
 
     }
 }
