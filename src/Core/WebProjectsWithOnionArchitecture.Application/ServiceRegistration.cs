@@ -15,7 +15,7 @@ namespace WebProjectsWithOnionArchitecture.Application
 
         public static void AddApplicationServices(this IServiceCollection serviceCollection)
         {
-            //MediatR library will be added here.
+            //TODO:MediatR library will be added here.
             serviceCollection.AddTransient<GetCrmWhoAmIHandler>();
             serviceCollection.AddTransient<InsertCrmUserCommandHandler>();
             serviceCollection.AddTransient<InsertCrmUserCommandResponse>();

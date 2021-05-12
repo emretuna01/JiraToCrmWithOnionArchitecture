@@ -11,6 +11,7 @@ namespace WebProjectsWithOnionArchitecture.Persist.DbContext
 {
     public class ApplicationDbContext : Microsoft.EntityFrameworkCore.DbContext, IApplicationDbContext
     {
+        //TODO:Orm aracındaki contexttir. Arayüzü application katmanındadır
         /// <summary>
         /// Orm aracındaki contexttir. Arayüzü application katmanındadır
         /// </summary>

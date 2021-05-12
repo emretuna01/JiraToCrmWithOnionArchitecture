@@ -8,6 +8,7 @@ using WebProjectsWithOnionArchitecture.Domain.Crm.Entities;
 
 namespace WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbContext
 {
+    //TODO:Orm aracındaki contexttir. Arayüzü application katmanındadır
     /// <summary>
     /// Orm aracındaki persistence katmanında contextin arayüzüdür.
     /// </summary>
