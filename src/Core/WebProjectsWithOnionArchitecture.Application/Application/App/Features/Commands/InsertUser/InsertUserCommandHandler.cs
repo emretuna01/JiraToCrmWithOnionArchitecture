@@ -1,31 +1,35 @@
-﻿namespace WebProjectsWithOnionArchitecture.Application.Application.App.Features.Commands.InsertUser
+﻿using System.Threading.Tasks;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Enums;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.DbRepository;
+using WebProjectsWithOnionArchitecture.Domain.Entities.App.Entities;
+
+namespace WebProjectsWithOnionArchitecture.Application.Application.App.Features.Commands.InsertUser
 {
     public class InsertUserCommandHandler
-    {/*
-        readonly ICrmUserRepository _crmUserRepository;
-        private CrmUser _crmUser;
-        private InsertCrmUserCommandResponse _insertCrmUserCommandResponse;
+    {
+        private readonly IUserRepository _userRepository;
+        private User _user;
+        private InsertUserCommandResponse _insertUserCommandResponse;
 
-        public InsertCrmUserCommandHandler(ICrmUserRepository  crmUserRepository,CrmUser crmUser, InsertCrmUserCommandResponse insertCrmUserCommandResponse)
+        public InsertUserCommandHandler(IUserRepository userRepository, User user, InsertUserCommandResponse insertUserCommandResponse)
         {
-            _crmUserRepository = crmUserRepository;
-            _crmUser = crmUser;
-            _insertCrmUserCommandResponse = insertCrmUserCommandResponse;
+            _userRepository = userRepository;
+            _user = user;
+            _insertUserCommandResponse = insertUserCommandResponse;
         }
 
-        public async Task<InsertCrmUserCommandResponse> AddToDb(InsertCrmUserCommandRequest insertCrmUserCommandRequest)
-        {
+        public async Task<InsertUserCommandResponse> InsertUserToDb(InsertUserCommandRequest insertUserCommandRequest)
+        { 
             //TODO: automapper library will be added here
-            _crmUser.UserName = insertCrmUserCommandRequest.UserName;
-            _crmUser.Password = insertCrmUserCommandRequest.Password; 
+            _user.UserName = insertUserCommandRequest.UserName;
+            _user.Password = insertUserCommandRequest.Password;
 
-             var count= await _crmUserRepository.AddAsync(_crmUser);          
+            var count = await _userRepository.AddAsync(_user);
 
-            _insertCrmUserCommandResponse.Message = count.ToString() + EnumHolders.ResponseMessages.AddedSuccessfully.ToString();
-            _insertCrmUserCommandResponse.IsSuccessfull = count >= 0 ? EnumHolders.ResponseStatus.True.ToString() : EnumHolders.ResponseStatus.False.ToString();
+            _insertUserCommandResponse.Message = count.ToString() + EnumHolders.ResponseMessages.AddedSuccessfully.ToString();
+            _insertUserCommandResponse.IsSuccessfull = count >= 0 ? EnumHolders.ResponseStatus.True.ToString() : EnumHolders.ResponseStatus.False.ToString();
 
-            return _insertCrmUserCommandResponse;
+            return _insertUserCommandResponse;
         }
-        */
     }
 }

@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Persist\App\Persist\" />
     <Folder Include="Persist\Jira\" />
   </ItemGroup>
 
