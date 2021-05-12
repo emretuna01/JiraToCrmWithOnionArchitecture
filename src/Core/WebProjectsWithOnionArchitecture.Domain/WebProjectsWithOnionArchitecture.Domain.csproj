@@ -12,7 +12,8 @@
   <ItemGroup>
     <Folder Include="Entities\App\Common\" />
     <Folder Include="Entities\Crm\Common\" />
-    <Folder Include="Entities\Jira\" />
+    <Folder Include="Entities\Jira\Common\" />
+    <Folder Include="Entities\Jira\Entities\" />
   </ItemGroup>
 
 </Project>
