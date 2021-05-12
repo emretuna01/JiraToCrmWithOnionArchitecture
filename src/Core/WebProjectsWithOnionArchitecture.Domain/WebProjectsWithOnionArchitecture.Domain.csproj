@@ -9,4 +9,10 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Entities\App\Common\" />
+    <Folder Include="Entities\Crm\Common\" />
+    <Folder Include="Entities\Jira\" />
+  </ItemGroup>
+
 </Project>

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Domain.Crm.Common;
+using WebProjectsWithOnionArchitecture.Domain.Entities;
 
 namespace WebProjectsWithOnionArchitecture.Domain.Crm.Entities
 {
-    public class CrmSalesOrder:BaseCrmEntity
+    public class CrmSalesOrder: BaseEntity
     {        
         public string OdataEtag { get; set; }        
         public string Name { get; set; }        

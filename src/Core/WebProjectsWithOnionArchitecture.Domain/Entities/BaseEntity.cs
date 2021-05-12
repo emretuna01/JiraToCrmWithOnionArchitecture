@@ -5,13 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebProjectsWithOnionArchitecture.Domain.Crm.Common
+namespace WebProjectsWithOnionArchitecture.Domain.Entities
 {
-
-    public class BaseCrmEntity
+    public class BaseEntity
     {
         [Key]
         public Guid Guid { get; set; }
-
     }
 }
