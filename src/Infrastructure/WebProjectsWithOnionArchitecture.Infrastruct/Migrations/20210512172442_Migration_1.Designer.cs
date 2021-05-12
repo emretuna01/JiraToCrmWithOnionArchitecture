@@ -2,47 +2,21 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebProjectsWithOnionArchitecture.Persist.DbContext;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210512172442_Migration_1")]
+    partial class Migration_1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.5");
-
-            modelBuilder.Entity("WebProjectsWithOnionArchitecture.Domain.Entities.App.Entities.User", b =>
-                {
-                    b.Property<Guid>("Guid")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("CrmUserGuid")
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("LastLogin")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Guid");
-
-                    b.HasIndex("CrmUserGuid");
-
-                    b.ToTable("User");
-                });
 
             modelBuilder.Entity("WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities.CrmAccount", b =>
                 {
@@ -120,20 +94,6 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Migrations
                     b.HasKey("Guid");
 
                     b.ToTable("CrmUser");
-                });
-
-            modelBuilder.Entity("WebProjectsWithOnionArchitecture.Domain.Entities.App.Entities.User", b =>
-                {
-                    b.HasOne("WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities.CrmUser", "CrmUser")
-                        .WithMany("Users")
-                        .HasForeignKey("CrmUserGuid");
-
-                    b.Navigation("CrmUser");
-                });
-
-            modelBuilder.Entity("WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities.CrmUser", b =>
-                {
-                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

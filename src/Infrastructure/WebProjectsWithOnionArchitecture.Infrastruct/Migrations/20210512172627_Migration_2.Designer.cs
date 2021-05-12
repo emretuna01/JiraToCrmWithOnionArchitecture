@@ -9,7 +9,7 @@ using WebProjectsWithOnionArchitecture.Persist.DbContext;
 namespace WebProjectsWithOnionArchitecture.Infrastruct.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210510221742_Migration_2")]
+    [Migration("20210512172627_Migration_2")]
     partial class Migration_2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,7 +18,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.5");
 
-            modelBuilder.Entity("WebProjectsWithOnionArchitecture.Domain.Crm.Entities.CrmAccount", b =>
+            modelBuilder.Entity("WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities.CrmAccount", b =>
                 {
                     b.Property<Guid>("Guid")
                         .ValueGeneratedOnAdd()
@@ -41,7 +41,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Migrations
                     b.ToTable("CrmAccount");
                 });
 
-            modelBuilder.Entity("WebProjectsWithOnionArchitecture.Domain.Crm.Entities.CrmTask", b =>
+            modelBuilder.Entity("WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities.CrmTask", b =>
                 {
                     b.Property<Guid>("Guid")
                         .ValueGeneratedOnAdd()
@@ -67,7 +67,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Migrations
                     b.ToTable("CrmTask");
                 });
 
-            modelBuilder.Entity("WebProjectsWithOnionArchitecture.Domain.Crm.Entities.CrmUser", b =>
+            modelBuilder.Entity("WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities.CrmUser", b =>
                 {
                     b.Property<Guid>("Guid")
                         .ValueGeneratedOnAdd()

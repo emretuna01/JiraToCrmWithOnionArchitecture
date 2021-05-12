@@ -44,7 +44,11 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Migrations
                 {
                     Guid = table.Column<Guid>(type: "TEXT", nullable: false),
                     UserName = table.Column<string>(type: "TEXT", nullable: true),
-                    Password = table.Column<string>(type: "TEXT", nullable: true)
+                    Password = table.Column<string>(type: "TEXT", nullable: true),
+                    OdataContext = table.Column<string>(type: "TEXT", nullable: true),
+                    BusinessUnitId = table.Column<string>(type: "TEXT", nullable: true),
+                    UserId = table.Column<string>(type: "TEXT", nullable: true),
+                    OrganizationId = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
