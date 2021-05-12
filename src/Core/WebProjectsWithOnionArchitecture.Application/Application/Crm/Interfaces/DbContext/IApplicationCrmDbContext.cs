@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.DbContext;
 using WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities;
 
 namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.DbContext
@@ -7,11 +8,11 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Interface
     /// <summary>
     /// Orm aracındaki persistence katmanında contextin arayüzüdür.
     /// </summary>
-    public interface IApplicationCrmDbContext
+    public interface IApplicationCrmDbContext: IApplicationDbContext
     {
-        public DbSet<CrmUser> CrmUser { get; set; }
-        public DbSet<CrmTask> CrmTask { get; set; }
-        public DbSet<CrmAccount> CrmAccount { get; set; }
+        public DbSet<CrmUser> CrmUsers { get; set; }
+        public DbSet<CrmTask> CrmTasks { get; set; }
+        public DbSet<CrmAccount> CrmAccounts { get; set; }
 
     }
 }

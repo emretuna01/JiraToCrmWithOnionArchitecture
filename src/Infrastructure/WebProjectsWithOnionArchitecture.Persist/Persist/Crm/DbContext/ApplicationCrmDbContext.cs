@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.DbContext;
+using WebProjectsWithOnionArchitecture.Domain.Entities.App.Entities;
 using WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities;
 
 namespace WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbContext
@@ -15,8 +16,9 @@ namespace WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbContext
         {
 
         }
-        public DbSet<CrmUser> CrmUser { get ; set; }
-        public DbSet<CrmTask> CrmTask { get; set; }
-        public DbSet<CrmAccount> CrmAccount { get; set; }
+        public DbSet<CrmUser> CrmUsers { get ; set; }
+        public DbSet<CrmTask> CrmTasks { get; set; }
+        public DbSet<CrmAccount> CrmAccounts { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

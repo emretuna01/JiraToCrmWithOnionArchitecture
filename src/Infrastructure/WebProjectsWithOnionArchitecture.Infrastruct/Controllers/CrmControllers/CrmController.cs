@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.InsertCrmUser;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Commands.InsertUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmControllers
@@ -23,7 +23,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         }
         
         [HttpPost("adduser")]       
-        public async Task<InsertCrmUserCommandResponse> AddCrmUserToDb(InsertCrmUserCommandRequest insertCrmUserCommandRequest)
+        public async Task<InsertUserCommandResponse> AddCrmUserToDb(InsertUserCommandRequest insertCrmUserCommandRequest)
         {
             return null;
         }

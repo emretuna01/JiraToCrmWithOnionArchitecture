@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Application.Crm.Features.Enums;
-using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.DbRepository;
-using WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities;
-
-namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.InsertCrmUser
+﻿namespace WebProjectsWithOnionArchitecture.Application.Application.App.Features.Commands.InsertUser
 {
-    public class InsertCrmUserCommandHandler
+    public class InsertUserCommandHandler
     {/*
         readonly ICrmUserRepository _crmUserRepository;
         private CrmUser _crmUser;
