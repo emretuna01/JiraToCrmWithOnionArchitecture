@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Enums;
 using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository;
-using WebProjectsWithOnionArchitecture.Domain.Crm.Entities;
+using WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities;
 
 namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.InsertCrmUser
 {

@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Domain.Entities;
 
-namespace WebProjectsWithOnionArchitecture.Domain.Crm.Entities
+namespace WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities
 {
     public class CrmUser: BaseEntity
     {
+        public string UserName { get; set; }
+        public string Password { get; set; }
         public string OdataContext { get; set; }
         public string BusinessUnitId { get; set; }
         public string UserId { get; set; }

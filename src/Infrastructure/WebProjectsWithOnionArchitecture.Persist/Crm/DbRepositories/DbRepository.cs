@@ -5,12 +5,12 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository;
-using WebProjectsWithOnionArchitecture.Domain.Crm.Common;
+using WebProjectsWithOnionArchitecture.Domain.Entities;
 using WebProjectsWithOnionArchitecture.Persist.DbContext;
 
 namespace WebProjectsWithOnionArchitecture.Persist.Crm.Repositories
 {
-    public class DbRepository<T> : IDbRepository<T> where T : BaseCrmEntity
+    public class DbRepository<T> : IDbRepository<T> where T : BaseEntity
     {
         readonly ApplicationDbContext _applicationDbContext;
         public DbRepository(ApplicationDbContext applicationDbContext)

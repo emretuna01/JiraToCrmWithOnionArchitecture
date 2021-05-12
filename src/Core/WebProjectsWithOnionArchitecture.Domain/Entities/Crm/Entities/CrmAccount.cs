@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Domain.Entities;
 
-namespace WebProjectsWithOnionArchitecture.Domain.Crm.Entities
+namespace WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities
 {
     public class CrmAccount : BaseEntity
     {

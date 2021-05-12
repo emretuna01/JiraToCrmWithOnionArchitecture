@@ -1,4 +1,3 @@
-C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.csprojAssemblyReference.cache
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.AssemblyInfoInputs.cache
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.AssemblyInfo.cs
@@ -47,6 +46,7 @@ C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infra
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Application.pdb
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.pdb
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Domain.pdb
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.csprojAssemblyReference.cache
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\staticwebassets\WebProjectsWithOnionArchitecture.Infrastruct.StaticWebAssets.Manifest.cache
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\staticwebassets\WebProjectsWithOnionArchitecture.Infrastruct.StaticWebAssets.xml
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\scopedcss\bundle\WebProjectsWithOnionArchitecture.Infrastruct.styles.css
