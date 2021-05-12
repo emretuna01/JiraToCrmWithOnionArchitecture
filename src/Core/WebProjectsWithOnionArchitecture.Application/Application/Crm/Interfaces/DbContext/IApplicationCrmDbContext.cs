@@ -7,7 +7,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Interface
     /// <summary>
     /// Orm aracındaki persistence katmanında contextin arayüzüdür.
     /// </summary>
-    public interface IApplicationDbContext
+    public interface IApplicationCrmDbContext
     {
         public DbSet<CrmUser> CrmUser { get; set; }
         public DbSet<CrmTask> CrmTask { get; set; }

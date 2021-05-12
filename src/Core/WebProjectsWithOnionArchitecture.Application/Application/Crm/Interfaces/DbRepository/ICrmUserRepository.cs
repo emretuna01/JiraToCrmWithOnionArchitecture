@@ -5,6 +5,5 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Interface
 {
     public interface ICrmUserRepository:IDbRepository<CrmUser>
     {
-       
     }
 }

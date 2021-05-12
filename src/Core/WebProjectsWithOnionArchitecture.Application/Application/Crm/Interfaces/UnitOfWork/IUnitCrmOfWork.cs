@@ -4,7 +4,7 @@ using WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.Db
 
 namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.UnitOfWork
 {
-    public interface IUnitOfWork
+    public interface IUnitCrmOfWork
     {
         public Task<IDbContextTransaction> BeginTransactionAsync();        
         public ICrmUserRepository CrmUserRepository { get;}

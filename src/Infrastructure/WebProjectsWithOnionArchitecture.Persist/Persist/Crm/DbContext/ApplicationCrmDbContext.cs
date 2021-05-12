@@ -1,22 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.DbContext;
 using WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities;
 
-namespace WebProjectsWithOnionArchitecture.Persist.DbContext
+namespace WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbContext
 {
-    public class ApplicationDbContext : Microsoft.EntityFrameworkCore.DbContext, IApplicationDbContext
+    public class ApplicationCrmDbContext : Microsoft.EntityFrameworkCore.DbContext, IApplicationCrmDbContext
     {
         //TODO:Orm aracındaki contexttir. Arayüzü application katmanındadır
         /// <summary>
         /// Orm aracındaki contexttir. Arayüzü application katmanındadır
         /// </summary>
         /// <param name="dbContextOptions"></param>
-        public ApplicationDbContext(DbContextOptions dbContextOptions):base(dbContextOptions)
+        public ApplicationCrmDbContext(DbContextOptions dbContextOptions):base(dbContextOptions)
         {
 
         }

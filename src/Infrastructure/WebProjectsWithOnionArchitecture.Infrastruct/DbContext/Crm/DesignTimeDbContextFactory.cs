@@ -6,11 +6,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Persist.DbContext;
+using WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbContext;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.DbContext.Crm
 {
-    public abstract class DesignTimeDbContextFactory<TContext> : IDesignTimeDbContextFactory<TContext> where TContext : ApplicationDbContext
+    public abstract class DesignTimeDbContextFactory<TContext> : IDesignTimeDbContextFactory<TContext> where TContext : ApplicationCrmDbContext
     {
         protected abstract TContext CreateNewInstance(DbContextOptions<TContext> dbContextOptions);
 

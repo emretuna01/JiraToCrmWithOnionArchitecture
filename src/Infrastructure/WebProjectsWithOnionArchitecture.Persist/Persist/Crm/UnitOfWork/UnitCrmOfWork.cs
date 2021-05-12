@@ -1,25 +1,20 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.DbRepository;
+﻿using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Storage;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.DbRepository;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.UnitOfWork;
-using WebProjectsWithOnionArchitecture.Persist.DbContext;
+using WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbContext;
 
-namespace WebProjectsWithOnionArchitecture.Persist.Crm.UnitOfWork
+namespace WebProjectsWithOnionArchitecture.Persist.Persist.Crm.UnitOfWork
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitCrmOfWork : IUnitCrmOfWork
     {
-        readonly ApplicationDbContext _applicationDbContext;
+        readonly ApplicationCrmDbContext _applicationDbContext;
         public ICrmUserRepository CrmUserRepository { get; }
         public ICrmAccountRepository CrmAccountRepository { get; }
         public ICrmTaskRepository CrmTaskRepository { get; }
         public ICrmSalesOrderRepository CrmSalesOrderRepository { get; }
 
-        public UnitOfWork(ApplicationDbContext applicationDbContext, 
+        public UnitCrmOfWork(ApplicationCrmDbContext applicationDbContext, 
                           ICrmUserRepository crmUserRepository, 
                           ICrmAccountRepository crmAccountRepository, 
                           ICrmTaskRepository crmTaskRepository,

@@ -1,20 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.DbRepository;
-using WebProjectsWithOnionArchitecture.Domain.Entities;
 using WebProjectsWithOnionArchitecture.Domain.Entities.App.Common;
-using WebProjectsWithOnionArchitecture.Persist.DbContext;
+using WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbContext;
 
-namespace WebProjectsWithOnionArchitecture.Persist.Crm.Repositories
+namespace WebProjectsWithOnionArchitecture.Persist.Persist.App.Common
 {
     public class DbRepository<T> : IDbRepository<T> where T : BaseEntity
     {
-        readonly ApplicationDbContext _applicationDbContext;
-        public DbRepository(ApplicationDbContext applicationDbContext)
+        readonly ApplicationCrmDbContext _applicationDbContext;
+        public DbRepository(ApplicationCrmDbContext applicationDbContext)
         {
             _applicationDbContext = applicationDbContext;
         }

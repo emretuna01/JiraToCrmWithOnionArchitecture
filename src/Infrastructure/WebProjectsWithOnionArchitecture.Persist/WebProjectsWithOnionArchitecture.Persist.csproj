@@ -12,4 +12,9 @@
     <ProjectReference Include="..\..\Core\WebProjectsWithOnionArchitecture.Application\WebProjectsWithOnionArchitecture.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Persist\App\Persist\" />
+    <Folder Include="Persist\Jira\" />
+  </ItemGroup>
+
 </Project>

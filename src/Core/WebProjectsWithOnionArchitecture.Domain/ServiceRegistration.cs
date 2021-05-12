@@ -13,7 +13,6 @@ namespace WebProjectsWithOnionArchitecture.Domain
 
         public static void AddDomainServices(this IServiceCollection serviceCollection)
         {
-            serviceCollection.AddTransient<CrmUser>();
         }
     }
 }

@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebProjectsWithOnionArchitecture.Persist.DbContext;
+using WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbContext;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(ApplicationCrmDbContext))]
     [Migration("20210512172943_Migration_4")]
     partial class Migration_4
     {
