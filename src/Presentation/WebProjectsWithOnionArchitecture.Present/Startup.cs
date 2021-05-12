@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.DbRepository;
 using WebProjectsWithOnionArchitecture.Persist;
 using WebProjectsWithOnionArchitecture.Persist.Crm.DbRepositories;
 

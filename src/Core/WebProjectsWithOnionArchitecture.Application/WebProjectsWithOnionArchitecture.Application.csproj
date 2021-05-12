@@ -5,8 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Crm\Dtos\" />
-    <Folder Include="Crm\Exceptions\" />
+    <Folder Include="Application\Jira\" />
+    <Folder Include="Application\Crm\Dtos\" />
+    <Folder Include="Application\Crm\Exceptions\" />
   </ItemGroup>
 
   <ItemGroup>

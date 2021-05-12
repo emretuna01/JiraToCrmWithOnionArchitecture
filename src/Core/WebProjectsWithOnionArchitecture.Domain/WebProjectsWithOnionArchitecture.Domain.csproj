@@ -10,7 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\App\Common\" />
     <Folder Include="Entities\Crm\Common\" />
     <Folder Include="Entities\Jira\Common\" />
     <Folder Include="Entities\Jira\Entities\" />

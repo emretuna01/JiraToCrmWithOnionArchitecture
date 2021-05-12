@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Enums;
-using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.DbRepository;
+using WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.DbRepository;
 using WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities;
 
 namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.UpdateCrmUser
@@ -22,7 +23,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.Upd
         }
 
         public async Task<UpdateCrmUserCommandServiceResponse> UpdateCrmUser(UpdateCrmUserCommandRequest  updateCrmUserCommandRequest,UpdateCrmUserCommandResponse updateCrmUserCommandResponse)
-        {
+        {/*
             _crmUser.UserName = updateCrmUserCommandRequest.UserName;
             _crmUser.Password = updateCrmUserCommandRequest.Password;
 
@@ -41,6 +42,8 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.Upd
             _updateCrmUserCommandServiceResponse.IsSuccessfull = count >= 0 ? EnumHolders.ResponseStatus.True.ToString() : EnumHolders.ResponseStatus.False.ToString();
 
             return _updateCrmUserCommandServiceResponse;
+            */
+            return null;
 
         }
 

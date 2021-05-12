@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository;
+using WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.DbRepository;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
 
-namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser
+namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Queries.GetCrmUser
 {
     public class GetCrmUserHandler
     {
@@ -19,7 +17,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetC
         public async Task<GetCrmUserResponse> GetCrmUserFromDb(GetCrmUserRequest getCrmUserRequest)
         {
             //TODO:count and uniq value control will be added with automapper library
-
+            /*
             var crmusers =await _crmUserRepository.GetWhereAsync(p=>p.UserName.Contains(getCrmUserRequest.UserName) && p.Password.Contains(getCrmUserRequest.Password) );
             GetCrmUserResponse getCrmUserResponse = new GetCrmUserResponse()
             {
@@ -31,6 +29,9 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetC
                 UserId = crmusers.First().UserId
             };
             return  getCrmUserResponse;
+
+            */
+            return null;
         }
 
     }

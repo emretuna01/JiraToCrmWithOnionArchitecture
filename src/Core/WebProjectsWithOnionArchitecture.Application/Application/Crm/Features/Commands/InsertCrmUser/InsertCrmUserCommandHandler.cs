@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Enums;
-using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.DbRepository;
 using WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities;
 
 namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.InsertCrmUser
 {
     public class InsertCrmUserCommandHandler
-    {
+    {/*
         readonly ICrmUserRepository _crmUserRepository;
         private CrmUser _crmUser;
         private InsertCrmUserCommandResponse _insertCrmUserCommandResponse;
@@ -35,5 +35,6 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.Ins
 
             return _insertCrmUserCommandResponse;
         }
+        */
     }
 }

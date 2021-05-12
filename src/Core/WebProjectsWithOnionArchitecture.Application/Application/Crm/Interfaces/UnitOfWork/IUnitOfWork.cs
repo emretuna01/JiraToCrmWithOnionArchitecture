@@ -1,12 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository;
+﻿using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Storage;
+using WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.DbRepository;
 
-namespace WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.UnitOfWork
+namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.UnitOfWork
 {
     public interface IUnitOfWork
     {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Domain.Entities;
+using WebProjectsWithOnionArchitecture.Domain.Entities.App.Common;
 
 namespace WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities
 {

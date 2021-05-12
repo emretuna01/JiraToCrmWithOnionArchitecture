@@ -14,25 +14,24 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
     public class CrmController : ControllerBase
     {
         //TODO:mediatR library will be added here
-        public readonly InsertCrmUserCommandHandler _insertCrmUserCommandHandler;
-        public readonly GetCrmUserHandler _getCrmUserHandler;
+       // public readonly InsertCrmUserCommandHandler _insertCrmUserCommandHandler;
+       // public readonly GetCrmUserHandler _getCrmUserHandler;
 
-        public CrmController(InsertCrmUserCommandHandler insertCrmUserCommandHandler, GetCrmUserHandler getCrmUserHandler)
+        public CrmController()
         {
-            _insertCrmUserCommandHandler = insertCrmUserCommandHandler;
-            _getCrmUserHandler = getCrmUserHandler;
+          
         }
         
-        [HttpPost("addcrmuser")]       
+        [HttpPost("adduser")]       
         public async Task<InsertCrmUserCommandResponse> AddCrmUserToDb(InsertCrmUserCommandRequest insertCrmUserCommandRequest)
-        {               
-            return await _insertCrmUserCommandHandler.AddToDb(insertCrmUserCommandRequest);
+        {
+            return null;
         }
        
         [HttpPost("getcrmuser")]
         public async Task<GetCrmUserResponse> GetCrmUserFromDbByName(GetCrmUserRequest getCrmUserRequest)
         {
-            return await _getCrmUserHandler.GetCrmUserFromDb(getCrmUserRequest);
+            return null;
         }
         
 
