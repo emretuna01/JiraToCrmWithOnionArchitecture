@@ -6,7 +6,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.InsertCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
-using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmControllers
 {

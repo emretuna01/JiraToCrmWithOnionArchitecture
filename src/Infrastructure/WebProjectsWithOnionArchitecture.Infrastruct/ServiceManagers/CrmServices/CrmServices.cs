@@ -7,5 +7,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.CrmServic
 {
     public class CrmServices
     {
+
+
     }
 }

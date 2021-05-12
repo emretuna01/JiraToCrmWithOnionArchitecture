@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.UpdateCrmUser
 {
-    public class UpsertCrmUserCommandRequest
+    public class UpdateCrmUserCommandServiceResponse
     {
+        public string IsSuccessfull { get; set; }
+        public string Message { get; set; }
     }
 }

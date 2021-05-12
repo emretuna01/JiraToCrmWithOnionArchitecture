@@ -9,7 +9,6 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application;
-using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI;
 using WebProjectsWithOnionArchitecture.Domain;
 using WebProjectsWithOnionArchitecture.Persist;
 

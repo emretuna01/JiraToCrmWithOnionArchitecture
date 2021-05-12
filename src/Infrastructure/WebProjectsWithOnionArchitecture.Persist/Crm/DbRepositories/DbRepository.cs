@@ -43,12 +43,12 @@ namespace WebProjectsWithOnionArchitecture.Persist.Crm.Repositories
         }
 
         //TODO:Count control will be added
-        public async Task<T> UpdateAsync(T type, Guid guid)
+        public async Task<int> UpdateAsync(T type, Guid guid)
         {
             var existEntry =await Table.FindAsync(guid);
             _applicationDbContext.Entry(existEntry).CurrentValues.SetValues(type);
-            await _applicationDbContext.SaveChangesAsync();
-            return existEntry;
+            return await _applicationDbContext.SaveChangesAsync();
+
         }
     }
 }

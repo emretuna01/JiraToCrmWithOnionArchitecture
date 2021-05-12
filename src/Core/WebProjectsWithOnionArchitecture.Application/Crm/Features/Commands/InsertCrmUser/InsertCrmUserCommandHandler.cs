@@ -28,13 +28,9 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.Ins
             _crmUser.UserName = insertCrmUserCommandRequest.UserName;
             _crmUser.Password = insertCrmUserCommandRequest.Password; 
 
-             var count= await _crmUserRepository.AddAsync(_crmUser);
+             var count= await _crmUserRepository.AddAsync(_crmUser);          
 
-            var test1 = count.ToString();
-            var test2 = EnumHolders.ResponseMessages.AddedSuccessfully.ToString();
-            var test = test1 + test2;
-
-            _insertCrmUserCommandResponse.Message = count.ToString() +" "+ EnumHolders.ResponseMessages.AddedSuccessfully.ToString();
+            _insertCrmUserCommandResponse.Message = count.ToString() + EnumHolders.ResponseMessages.AddedSuccessfully.ToString();
             _insertCrmUserCommandResponse.IsSuccessfull = count >= 0 ? EnumHolders.ResponseStatus.True.ToString() : EnumHolders.ResponseStatus.False.ToString();
 
             return _insertCrmUserCommandResponse;

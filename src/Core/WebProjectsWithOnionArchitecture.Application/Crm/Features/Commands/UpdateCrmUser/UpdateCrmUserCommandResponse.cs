@@ -5,15 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmIService
+namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.UpdateCrmUser
 {
-    public class GetCrmWhoAmIResponse
+    public class UpdateCrmUserCommandResponse
     {
         [JsonProperty("@odata.context")]
         public string OdataContext { get; set; }
         public string BusinessUnitId { get; set; }
         public string UserId { get; set; }
         public string OrganizationId { get; set; }
-
     }
 }
