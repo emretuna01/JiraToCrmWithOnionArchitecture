@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbRepository;
 
-namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI
+namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmIService
 {
     public class GetCrmWhoAmIHandler
     {
@@ -15,6 +15,10 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetC
         {
             _crmUserRepository = crmUserRepository;
         }
+
+
+
+
 
     }
 }

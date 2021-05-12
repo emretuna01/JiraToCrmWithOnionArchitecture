@@ -14,6 +14,8 @@ namespace WebProjectsWithOnionArchitecture.Application.Crm.Interfaces.DbReposito
         Task<List<T>> GetWhereAsync(Expression<Func<T, bool>> expression);
         Task<T> GetByIdAsync(Guid id);
         Task<int> AddAsync(T type);
-        
+        Task<T> UpdateAsync(T type, Guid guid);
+
+
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmI
+namespace WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmWhoAmIService
 {
     public class GetCrmWhoAmIResponse
     {
