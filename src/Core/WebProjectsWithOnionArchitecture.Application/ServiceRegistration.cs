@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Commands.InsertUser;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUser;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Queries.GetCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.UpdateCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
@@ -22,6 +23,9 @@ namespace WebProjectsWithOnionArchitecture.Application
             serviceCollection.AddTransient<InsertUserCommandHandler>();
             serviceCollection.AddTransient<User>();
             serviceCollection.AddTransient<InsertUserCommandResponse>();
+            serviceCollection.AddTransient<GetUserHandler>();
+            serviceCollection.AddScoped<List<GetUserResponse>>();
+            serviceCollection.AddTransient<GetUserResponse>();
 
 
         }

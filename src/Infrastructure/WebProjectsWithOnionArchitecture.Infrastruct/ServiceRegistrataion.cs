@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.CrmServices
+namespace WebProjectsWithOnionArchitecture.Infrastruct
 {
-    public class CrmServices
+    public class ServiceRegistrataion
     {
+
 
 
     }

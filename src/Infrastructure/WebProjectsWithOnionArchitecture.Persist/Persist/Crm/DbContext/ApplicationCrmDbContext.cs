@@ -13,8 +13,7 @@ namespace WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbContext
         /// </summary>
         /// <param name="dbContextOptions"></param>
         public ApplicationCrmDbContext(DbContextOptions dbContextOptions):base(dbContextOptions)
-        {
-
+        {            
         }
         public DbSet<CrmUser> CrmUsers { get ; set; }
         public DbSet<CrmTask> CrmTasks { get; set; }

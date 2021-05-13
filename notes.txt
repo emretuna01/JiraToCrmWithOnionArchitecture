@@ -59,6 +59,7 @@ unitofwork öğren
 extension method in asp.core öğren
 reflection tasarımını öğrenilecek
 decorator design patern bak
+Iconfigurationda obje newlemesine gerek yok neden öğrenilecek ? static olabilir mi
 
 
 

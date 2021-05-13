@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Application\App\Features\Queries\" />
     <Folder Include="Application\Jira\" />
     <Folder Include="Application\Crm\Dtos\" />
     <Folder Include="Application\Crm\Exceptions\" />

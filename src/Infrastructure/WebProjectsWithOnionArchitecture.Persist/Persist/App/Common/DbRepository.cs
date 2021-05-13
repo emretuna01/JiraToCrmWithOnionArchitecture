@@ -27,9 +27,9 @@ namespace WebProjectsWithOnionArchitecture.Persist.Persist.App.Common
             return await _applicationDbContext.SaveChangesAsync();
         }
 
-        public Task<List<T>> GetAsync()
+        public async Task<List<T>> GetAsync()
         {
-            throw new NotImplementedException();
+            return await Table.ToListAsync();
         }
 
         public Task<T> GetByIdAsync(Guid id)

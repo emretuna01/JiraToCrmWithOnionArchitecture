@@ -20,6 +20,7 @@ namespace WebProjectsWithOnionArchitecture.Persist
         {
             serviceCollection.AddDbContext<ApplicationCrmDbContext>(dbContextOptions => dbContextOptions.UseSqlite(configuration.GetConnectionString("SqlLite")));
             serviceCollection.AddTransient<IUserRepository, UserRepository>();
+            
         }
 
     }

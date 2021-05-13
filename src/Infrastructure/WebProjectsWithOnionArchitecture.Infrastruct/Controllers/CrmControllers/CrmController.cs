@@ -1,12 +1,17 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using RestSharp.Authenticators;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Commands.InsertUser;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
+using WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Services;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmControllers
 {
@@ -15,15 +20,17 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
     public class CrmController : ControllerBase
     {
 
-        //TODO:mediatR library will be added here
-       // public readonly InsertCrmUserCommandHandler _insertCrmUserCommandHandler;
-       // public readonly GetCrmUserHandler _getCrmUserHandler;
+        private readonly InsertUserCommandHandler _insertUserCommandHandler;
+        private readonly GetUserHandler _getUserHandler;
+        private readonly CrmServices _crmServices;
+        
 
-       private readonly InsertUserCommandHandler _insertUserCommandHandler;
 
-        public CrmController(InsertUserCommandHandler insertUserCommandHandler)
+        public CrmController(InsertUserCommandHandler insertUserCommandHandler, GetUserHandler getUserHandler, CrmServices crmServices)
         {
             _insertUserCommandHandler = insertUserCommandHandler;
+            _getUserHandler = getUserHandler;
+            _crmServices = crmServices;
         }
         
         [HttpPost("adduser")]       
@@ -31,14 +38,19 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         {
             return await _insertUserCommandHandler.InsertUserToDb(insertCrmUserCommandRequest);
         }
-       
+
+        [HttpGet("getuser")]
+        public async Task<List<GetUserResponse>> GetUserToDb()
+        {
+            return await _getUserHandler.GetUserFromDb();
+        }
+
+        
         [HttpPost("getcrmuser")]
         public async Task<GetCrmUserResponse> GetCrmUserFromDbByName(GetCrmUserRequest getCrmUserRequest)
         {
-            void test(){};
-
+            _crmServices.GetUserAdress();
             return null;
-
         }
         
 
