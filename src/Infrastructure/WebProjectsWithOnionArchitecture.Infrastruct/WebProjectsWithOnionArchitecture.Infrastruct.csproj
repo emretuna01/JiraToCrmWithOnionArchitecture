@@ -24,8 +24,4 @@
     <ProjectReference Include="..\WebProjectsWithOnionArchitecture.Persist\WebProjectsWithOnionArchitecture.Persist.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

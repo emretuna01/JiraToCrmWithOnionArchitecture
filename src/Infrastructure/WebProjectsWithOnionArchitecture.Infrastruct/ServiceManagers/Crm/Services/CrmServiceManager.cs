@@ -16,20 +16,21 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
 
         }
 
-        public IRestResponse RequestSenderManager(GetUserByNameRequest getUserByNameRequest, Method method,string contentType)
+        public async Task<IRestResponse> RequestSenderManager(GetUserByNameRequest getUserByNameRequest, Method method = 0)
         {
             var url = _crmServicesUtilities.GetCrmUserAdress();
+            var contentType = _crmServicesUtilities.GetRequestContentType();
             var user = _crmServicesUtilities.GetUserByNameFromDbCheck(getUserByNameRequest);
             var authenticator = _crmServicesUtilities.NtlmAuthenticatorByCredentials(user);
             var resClient = _crmServicesUtilities.PrepareRestClient(url, authenticator);
             var resRequest = _crmServicesUtilities.PrepareRestRequest(method, contentType);
-            return _crmServicesUtilities.RequestSender(resClient, resRequest);
+            return await _crmServicesUtilities.RequestSender(resClient, resRequest);
         }
 
 
 
 
-}
+    }
 
-    
+
 }

@@ -34,9 +34,9 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
             serviceCollection.AddDomainServices();
             serviceCollection.AddPersistanceServices(Configuration);
             serviceCollection.AddApplicationServices();                       
-            serviceCollection.AddControllers();
-            serviceCollection.AddTransient<NtlmAuthenticator>();
-            serviceCollection.AddScoped<CrmServices>();           
+            serviceCollection.AddControllers();            
+            serviceCollection.AddTransient<CrmServicesUtilities>();
+            serviceCollection.AddTransient<CrmServiceManager>();
             serviceCollection.Configure<Configuration>(option => Configuration.GetSection("CrmRootParameters").Bind(option));
             serviceCollection.AddTransient<RestSharpFactory>();
 

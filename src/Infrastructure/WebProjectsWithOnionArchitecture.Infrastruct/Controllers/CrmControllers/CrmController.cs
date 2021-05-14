@@ -10,6 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Commands.InsertUser;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUser;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
 using WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Services;
 
@@ -22,15 +23,14 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
 
         private readonly InsertUserCommandHandler _insertUserCommandHandler;
         private readonly GetUserHandler _getUserHandler;
-        private readonly CrmServices _crmServices;
+        private readonly CrmServiceManager _crmServiceManager;
         
 
-
-        public CrmController(InsertUserCommandHandler insertUserCommandHandler, GetUserHandler getUserHandler, CrmServices crmServices)
+        public CrmController(InsertUserCommandHandler insertUserCommandHandler, GetUserHandler getUserHandler, CrmServiceManager crmServiceManager)
         {
             _insertUserCommandHandler = insertUserCommandHandler;
             _getUserHandler = getUserHandler;
-            _crmServices = crmServices;
+            _crmServiceManager = crmServiceManager;
         }
         
         [HttpPost("adduser")]       
@@ -47,9 +47,9 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
 
         
         [HttpPost("getcrmuser")]
-        public async Task<GetCrmUserResponse> GetCrmUserFromDbByName(GetCrmUserRequest getCrmUserRequest)
+        public async Task<GetCrmUserResponse> GetCrmUserFromService(GetUserByNameRequest  getUserByNameRequest)
         {
-            _crmServices.GetUserAdress();
+           var test=  await _crmServiceManager.RequestSenderManager(getUserByNameRequest);
             return null;
         }
         

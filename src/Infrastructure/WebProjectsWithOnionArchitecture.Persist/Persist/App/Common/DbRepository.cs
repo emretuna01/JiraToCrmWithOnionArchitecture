@@ -39,7 +39,7 @@ namespace WebProjectsWithOnionArchitecture.Persist.Persist.App.Common
 
         public async Task<T> GetWhereAsync(Expression<Func<T, bool>> expression)
         {
-            return await Table.Where(expression).LastAsync();
+            return await Table.Where(expression).FirstOrDefaultAsync();
         }
 
         //TODO:Count control will be added

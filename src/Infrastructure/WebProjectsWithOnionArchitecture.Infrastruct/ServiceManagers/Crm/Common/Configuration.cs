@@ -11,6 +11,8 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Commo
         public string WhoAmI { get; set; }
         public string Task { get; set; }
         public string SystemUser { get; set; }
+        //TODO: ContentType type will change from string to string array
+        public string ContentType { get; set; }        
 
     }
 }

@@ -32,7 +32,10 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
         {
             return _configuration.Value.CrmDefaultLink + _configuration.Value.SystemUser;
         }
-
+        public string GetRequestContentType()
+        {
+            return _configuration.Value.ContentType;
+        }
         public async  Task<GetUserByNameResponse> GetUserByNameFromDbCheck(GetUserByNameRequest getUserByNameRequest)
         {
             return await _getUserByNameHandler.GetUserByNameFromDb(getUserByNameRequest);
@@ -62,9 +65,9 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return _restSharpFactory.RestRequest;
         }
 
-        public IRestResponse RequestSender(RestClient restClient, RestRequest restRequest)
+        public async Task<IRestResponse> RequestSender(RestClient restClient, RestRequest restRequest)
         {
-            return restClient.Execute(restRequest);
+            return await restClient.ExecuteAsync(restRequest);
         }
 
 
