@@ -37,9 +37,9 @@ namespace WebProjectsWithOnionArchitecture.Persist.Persist.App.Common
             throw new NotImplementedException();
         }
 
-        public async Task<List<T>> GetWhereAsync(Expression<Func<T, bool>> expression)
+        public async Task<T> GetWhereAsync(Expression<Func<T, bool>> expression)
         {
-            return await Table.Where(expression).ToListAsync();
+            return await Table.Where(expression).LastAsync();
         }
 
         //TODO:Count control will be added

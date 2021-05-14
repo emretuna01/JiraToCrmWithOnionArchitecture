@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using RestSharp;
 using RestSharp.Authenticators;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
 
         public void ConfigureServices(IServiceCollection serviceCollection)
         {
+            //TODO: mediatR will be added
             serviceCollection.AddDomainServices();
             serviceCollection.AddPersistanceServices(Configuration);
             serviceCollection.AddApplicationServices();                       
@@ -36,8 +38,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
             serviceCollection.AddTransient<NtlmAuthenticator>();
             serviceCollection.AddScoped<CrmServices>();           
             serviceCollection.Configure<Configuration>(option => Configuration.GetSection("CrmRootParameters").Bind(option));
-
-
+            serviceCollection.AddTransient<RestSharpFactory>();
 
         }
 

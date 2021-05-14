@@ -9,7 +9,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.App.Interface
     public interface IDbRepository<T> where T: BaseEntity
     {
         Task<List<T>> GetAsync();
-        Task<List<T>> GetWhereAsync(Expression<Func<T, bool>> expression);
+        Task<T> GetWhereAsync(Expression<Func<T, bool>> expression);
         Task<T> GetByIdAsync(Guid id);
         Task<int> AddAsync(T type);
         Task<int> UpdateAsync(T type, Guid guid);
