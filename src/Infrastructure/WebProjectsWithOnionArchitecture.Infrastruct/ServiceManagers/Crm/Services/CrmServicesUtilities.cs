@@ -18,6 +18,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
         private readonly IOptions<Configuration> _configuration;
         private readonly RestSharpFactory _restSharpFactory;
         private readonly GetUserByNameHandler _getUserByNameHandler;
+        
 
 
         public CrmServicesUtilities(IOptions<Configuration> configuration, RestSharpFactory restSharpFactory, GetUserByNameHandler getUserByNameHandler)
@@ -63,12 +64,14 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             _restSharpFactory.RestRequest = new RestRequest(method);
             _restSharpFactory.RestRequest.AddHeader("Content-Type", contentType);
             return _restSharpFactory.RestRequest;
-        }
+        }        
 
         public async Task<IRestResponse> RequestSender(RestClient restClient, RestRequest restRequest)
         {
             return await restClient.ExecuteAsync(restRequest);
         }
+
+        
 
 
 

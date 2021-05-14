@@ -11,6 +11,7 @@ using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.Db
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.DbRepository;
 using WebProjectsWithOnionArchitecture.Persist.Persist.App.Persist.DbRepositories;
 using WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbContext;
+using WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbRepositories;
 
 namespace WebProjectsWithOnionArchitecture.Persist
 {
@@ -19,7 +20,8 @@ namespace WebProjectsWithOnionArchitecture.Persist
         public static void AddPersistanceServices(this IServiceCollection serviceCollection, IConfiguration configuration)
         {
             serviceCollection.AddDbContext<ApplicationCrmDbContext>(dbContextOptions => dbContextOptions.UseSqlite(configuration.GetConnectionString("SqlLite")));
-            serviceCollection.AddTransient<IUserRepository, UserRepository>();           
+            serviceCollection.AddTransient<IUserRepository, UserRepository>();
+            serviceCollection.AddTransient<ICrmUserRepository, CrmUserRepository>();
 
         }
 

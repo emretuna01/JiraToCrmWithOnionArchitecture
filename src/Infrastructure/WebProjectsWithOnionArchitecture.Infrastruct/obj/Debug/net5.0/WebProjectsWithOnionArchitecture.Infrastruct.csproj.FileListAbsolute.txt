@@ -57,3 +57,5 @@ C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infra
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.pdb
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Infrastruct.genruntimeconfig.cache
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\RestSharp.dll
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Infrastruct\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

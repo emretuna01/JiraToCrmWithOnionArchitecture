@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json.Linq;
 using RestSharp.Authenticators;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Commands.InsertUser;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUser;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
+using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
 using WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Services;
 
@@ -24,16 +26,24 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         private readonly InsertUserCommandHandler _insertUserCommandHandler;
         private readonly GetUserHandler _getUserHandler;
         private readonly CrmServiceManager _crmServiceManager;
+        private readonly InsertCrmUserCommandHandler  _insertCrmUserCommandHandler;
         
 
-        public CrmController(InsertUserCommandHandler insertUserCommandHandler, GetUserHandler getUserHandler, CrmServiceManager crmServiceManager)
+
+        public CrmController(
+                             InsertUserCommandHandler insertUserCommandHandler, 
+                             GetUserHandler getUserHandler, 
+                             CrmServiceManager crmServiceManager, 
+                             InsertCrmUserCommandHandler insertCrmUserCommandHandler
+                            )
         {
             _insertUserCommandHandler = insertUserCommandHandler;
             _getUserHandler = getUserHandler;
             _crmServiceManager = crmServiceManager;
+            _insertCrmUserCommandHandler = insertCrmUserCommandHandler;
         }
         
-        [HttpPost("adduser")]       
+        [HttpPost("insertuser")]       
         public async Task<InsertUserCommandResponse> AddCrmUserToDb(InsertUserCommandRequest insertCrmUserCommandRequest)
         {
             return await _insertUserCommandHandler.InsertUserToDb(insertCrmUserCommandRequest);
@@ -47,10 +57,9 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
 
         
         [HttpPost("getcrmuser")]
-        public async Task<GetCrmUserResponse> GetCrmUserFromService(GetUserByNameRequest  getUserByNameRequest)
+        public async Task<string> GetCrmUserFromService(GetUserByNameRequest  getUserByNameRequest)
         {
-           var test=  await _crmServiceManager.RequestSenderManager(getUserByNameRequest);
-            return null;
+            return (await _crmServiceManager.RequestSenderManager(getUserByNameRequest)).Content;
         }
         
 

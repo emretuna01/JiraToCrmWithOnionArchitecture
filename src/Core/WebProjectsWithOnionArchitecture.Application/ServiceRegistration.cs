@@ -2,11 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Commands.InsertUser;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUser;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
+using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmUser;
 using WebProjectsWithOnionArchitecture.Domain.Entities.App.Entities;
 
 namespace WebProjectsWithOnionArchitecture.Application
@@ -26,7 +28,12 @@ namespace WebProjectsWithOnionArchitecture.Application
             serviceCollection.AddTransient<GetUserResponse>();
             serviceCollection.AddTransient<GetUserByNameHandler>();
             serviceCollection.AddTransient<GetUserByNameResponse>();
+            serviceCollection.AddTransient<InsertCrmUserCommandHandler>();
+            serviceCollection.AddTransient<InsertCrmUserCommandServiceResponse>();            
+            serviceCollection.AddAutoMapper(Assembly.GetExecutingAssembly());
             
+
+
 
 
 

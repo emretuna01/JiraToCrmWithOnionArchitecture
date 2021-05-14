@@ -12,6 +12,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.App.Interface
         Task<T> GetWhereAsync(Expression<Func<T, bool>> expression);
         Task<T> GetByIdAsync(Guid id);
         Task<int> AddAsync(T type);
+        Task<int> AddRangeAsync(List<T> type);
         Task<int> UpdateAsync(T type, Guid guid);
 
 

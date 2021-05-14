@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
+using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmUser;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Services
 {
     public class CrmServiceManager
     {
         private readonly CrmServicesUtilities _crmServicesUtilities;
-        public CrmServiceManager(CrmServicesUtilities crmServicesUtilities)
+        private readonly InsertCrmUserCommandHandler _insertCrmUserCommandHandler;
+        public CrmServiceManager(CrmServicesUtilities crmServicesUtilities, InsertCrmUserCommandHandler insertCrmUserCommandHandler)
         {
             _crmServicesUtilities = crmServicesUtilities;
-
+            _insertCrmUserCommandHandler = insertCrmUserCommandHandler;
         }
 
         public async Task<IRestResponse> RequestSenderManager(GetUserByNameRequest getUserByNameRequest, Method method = 0)
@@ -27,6 +29,11 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return await _crmServicesUtilities.RequestSender(resClient, resRequest);
         }
 
+        public async Task<InsertCrmUserCommandServiceResponse> InsertCrmUserManager(GetUserByNameRequest getUserByNameRequest, Method method = 0)
+        {
+            Task<IRestResponse> restResponse = RequestSenderManager(getUserByNameRequest);
+            return await _insertCrmUserCommandHandler.InsertCrmUser(restResponse);
+        }
 
 
 

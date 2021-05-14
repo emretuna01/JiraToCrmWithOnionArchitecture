@@ -27,6 +27,12 @@ namespace WebProjectsWithOnionArchitecture.Persist.Persist.App.Common
             return await _applicationDbContext.SaveChangesAsync();
         }
 
+        public async Task<int> AddRangeAsync(List<T> type)
+        {
+             await Table.AddRangeAsync(type);
+            return await  _applicationDbContext.SaveChangesAsync();
+        }
+
         public async Task<List<T>> GetAsync()
         {
             return await Table.ToListAsync();
