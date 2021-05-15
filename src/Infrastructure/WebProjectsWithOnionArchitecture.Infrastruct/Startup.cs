@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -39,6 +40,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
             serviceCollection.AddTransient<CrmServiceManager>();
             serviceCollection.Configure<Configuration>(option => Configuration.GetSection("CrmRootParameters").Bind(option));
             serviceCollection.AddTransient<RestSharpFactory>();
+            serviceCollection.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo());});
 
         }
 
@@ -54,7 +56,12 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
                 endpoints.MapControllers();
             });
 
-   
+            applicationBuilder.UseSwagger();
+            applicationBuilder.UseSwaggerUI(c =>{c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");});
+
+
+
+
         }
 
     }
