@@ -9,4 +9,3 @@ C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\WebProjectsWithOnionArchitecture.Domain\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Domain.dll
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\WebProjectsWithOnionArchitecture.Domain\obj\Debug\net5.0\ref\WebProjectsWithOnionArchitecture.Domain.dll
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\WebProjectsWithOnionArchitecture.Domain\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Domain.pdb
-C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Core\WebProjectsWithOnionArchitecture.Domain\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Domain.csprojAssemblyReference.cache

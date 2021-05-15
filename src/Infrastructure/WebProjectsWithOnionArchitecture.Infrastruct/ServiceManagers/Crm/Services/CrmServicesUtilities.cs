@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUser;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.Queries;
 using WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Common;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Services
@@ -37,9 +38,9 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
         {
             return _configuration.Value.ContentType;
         }
-        public async  Task<GetUserByNameResponse> GetUserByNameFromDbCheck(GetUserByNameRequest getUserByNameRequest)
+        public async  Task<GetUserByNameResponse> GetUserByNameFromDbCheck(IRequestQuery requestQuery)
         {
-            return await _getUserByNameHandler.GetUserByNameFromDb(getUserByNameRequest);
+            return await _getUserByNameHandler.GetUserByNameFromDb(requestQuery);
         }
 
         public NtlmAuthenticator NtlmAuthenticatorByCredentials(Task<GetUserByNameResponse> getUserByNameResponse)

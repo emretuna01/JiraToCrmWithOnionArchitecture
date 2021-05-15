@@ -9,6 +9,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.
 {
     public class InsertCrmUserCommandRequest
     {
+        //TODO: will be find better solution
         public IRestResponse RestResponse { get; set; }
     }
 }

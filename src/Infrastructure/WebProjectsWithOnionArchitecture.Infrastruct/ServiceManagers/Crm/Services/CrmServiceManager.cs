@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.Queries;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmUser;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Services
@@ -18,11 +19,11 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             _insertCrmUserCommandHandler = insertCrmUserCommandHandler;
         }
 
-        public async Task<IRestResponse> RequestSenderManager(GetUserByNameRequest getUserByNameRequest, Method method = 0)
+        public async Task<IRestResponse> RequestSenderManager(IRequestQuery requestQuery, Method method = 0)
         {
             var url = _crmServicesUtilities.GetCrmUserAdress();
             var contentType = _crmServicesUtilities.GetRequestContentType();
-            var user = _crmServicesUtilities.GetUserByNameFromDbCheck(getUserByNameRequest);
+            var user = _crmServicesUtilities.GetUserByNameFromDbCheck(requestQuery);
             var authenticator = _crmServicesUtilities.NtlmAuthenticatorByCredentials(user);
             var resClient = _crmServicesUtilities.PrepareRestClient(url, authenticator);
             var resRequest = _crmServicesUtilities.PrepareRestRequest(method, contentType);

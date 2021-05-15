@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUser;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.DbRepository;
+using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.Queries;
 
 namespace WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName
 {
@@ -19,9 +20,9 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.App.Features.
             _getUserByNameResponse = getUserByNameResponse;
         }
 
-        public async Task<GetUserByNameResponse> GetUserByNameFromDb(GetUserByNameRequest getUserByNameRequest)
+        public async Task<GetUserByNameResponse> GetUserByNameFromDb(IRequestQuery requestQuery)
         {
-            var result = await _userRepostitory.GetWhereAsync(p=> p.UserName.Contains(getUserByNameRequest.UserName) && p.Password.Contains(getUserByNameRequest.Password));
+            var result = await _userRepostitory.GetWhereAsync(p=> p.UserName.Contains(requestQuery.UserName) && p.Password.Contains(requestQuery.Password));
             
             //TODO:automapper will be added 
             _getUserByNameResponse.Guid = result.Guid;
