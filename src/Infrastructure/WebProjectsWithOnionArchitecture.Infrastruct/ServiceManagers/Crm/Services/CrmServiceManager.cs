@@ -31,7 +31,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
 
         public async Task<InsertCrmUserCommandServiceResponse> InsertCrmUserManager(GetUserByNameRequest getUserByNameRequest, Method method = 0)
         {
-            Task<IRestResponse> restResponse = RequestSenderManager(getUserByNameRequest);
+            Task<IRestResponse> restResponse = (Task<IRestResponse>)await RequestSenderManager(getUserByNameRequest);
             return await _insertCrmUserCommandHandler.InsertCrmUser(restResponse);
         }
 
