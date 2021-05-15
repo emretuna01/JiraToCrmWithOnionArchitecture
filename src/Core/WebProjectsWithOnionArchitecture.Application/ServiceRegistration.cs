@@ -9,6 +9,7 @@ using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Comm
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUser;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmUser;
+using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Queries.GetCrmUser;
 using WebProjectsWithOnionArchitecture.Domain.Entities.App.Entities;
 
 namespace WebProjectsWithOnionArchitecture.Application
@@ -29,7 +30,8 @@ namespace WebProjectsWithOnionArchitecture.Application
             serviceCollection.AddTransient<GetUserByNameHandler>();
             serviceCollection.AddTransient<GetUserByNameResponse>();
             serviceCollection.AddTransient<InsertCrmUserCommandHandler>();
-            serviceCollection.AddTransient<InsertCrmUserCommandServiceResponse>();            
+            serviceCollection.AddTransient<InsertCrmUserCommandServiceResponse>();
+            serviceCollection.AddTransient<GetCrmUserHandler>();
             serviceCollection.AddAutoMapper(Assembly.GetExecutingAssembly());
             
 

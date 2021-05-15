@@ -1,4 +1,6 @@
-﻿using RestSharp;
+﻿using AutoMapper;
+using RestSharp;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Interfaces.DbRepository;
@@ -8,16 +10,17 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.
 {
     public class GetCrmUserHandler
     {
-        readonly ICrmUserRepository _crmUserRepository;
-
-        public GetCrmUserHandler(ICrmUserRepository crmUserRepository)
+        private readonly ICrmUserRepository _crmUserRepository;
+        private readonly IMapper _mapper;
+        public GetCrmUserHandler(ICrmUserRepository crmUserRepository, IMapper mapper)
         {
             _crmUserRepository = crmUserRepository;
+            _mapper = mapper;
         }
 
-        public async Task<GetCrmUserResponse> GetCrmUserFromDb()
+        public async Task<List<GetCrmUserResponse>> GetCrmUserFromDb()
         {
-            return null;
+            return _mapper.Map<List<GetCrmUserResponse>>(await _crmUserRepository.GetAsync());            
         }
 
     }
