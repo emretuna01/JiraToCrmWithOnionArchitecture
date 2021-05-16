@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.DbRepository;
 
+
 namespace WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUser
 {
     public class GetUserHandler
@@ -36,7 +37,8 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.App.Features.
 
             return _getUserResponse;
             
-        } 
+        }
 
+      
     }
 }

@@ -25,8 +25,8 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.App.Features.
             _user.Password = insertUserCommandRequest.Password;
 
             var count = await _userRepository.AddAsync(_user);
-
-            _insertUserCommandResponse.Message = count.ToString() + EnumHolders.ResponseMessages.AddedSuccessfully.ToString();
+        
+            _insertUserCommandResponse.Message = count.ToString() + EnumHolders.ResponseMessages.Added.ToString();
             _insertUserCommandResponse.IsSuccessfull = count >= 0 ? EnumHolders.ResponseStatus.True.ToString() : EnumHolders.ResponseStatus.False.ToString();
 
             return _insertUserCommandResponse;

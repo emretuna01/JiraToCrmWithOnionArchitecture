@@ -11,5 +11,6 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.
     {
         //TODO: will be find better solution
         public IRestResponse RestResponse { get; set; }
+
     }
 }

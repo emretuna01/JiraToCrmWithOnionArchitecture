@@ -1,18 +1,24 @@
-﻿namespace WebProjectsWithOnionArchitecture.Application.Application.App.Features.Enums
+﻿using System.ComponentModel;
+
+namespace WebProjectsWithOnionArchitecture.Application.Application.App.Features.Enums
 {
     public static class EnumHolders
     {
 
         public enum ResponseMessages
         {
-            AddedSuccessfully, UnSuccessfull
+            [Description("Row(s) Added Successfully")] Added,
+            [Description("Rows(s) Not Added")] Fail
         }
         public enum ResponseStatus
         {
-            True,False
+            [Description("Successfully")] True,
+            [Description("Unsuccessfully")] False
         }
 
 
 
     }
+
+ 
 }

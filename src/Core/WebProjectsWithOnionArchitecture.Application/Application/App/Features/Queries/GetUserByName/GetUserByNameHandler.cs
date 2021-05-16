@@ -35,6 +35,11 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.App.Features.
             return _getUserByNameResponse;
 
         }
+        public async Task<bool> CheckUserByNameFromDb(IRequestQuery requestQuery)
+        {
+              var test =await GetUserByNameFromDb(requestQuery);
+              if (test.Guid != Guid.Empty){return true;}else{return false;}
+        }
 
     }
 }

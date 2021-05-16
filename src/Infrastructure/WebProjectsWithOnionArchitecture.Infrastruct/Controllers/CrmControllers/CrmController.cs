@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Queries.GetCrmUser;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.TruncateCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
 using WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Services;
 
@@ -15,10 +16,12 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
     {
         private readonly CrmServiceManager _crmServiceManager;
         private readonly GetCrmUserHandler _getCrmUserHandler;
-        public CrmController(CrmServiceManager crmServiceManager, GetCrmUserHandler getCrmUserHandler)
+        private readonly TruncateCrmUserCommandHandler _truncateCrmUserCommandHandler;
+        public CrmController(CrmServiceManager crmServiceManager, GetCrmUserHandler getCrmUserHandler, TruncateCrmUserCommandHandler truncateCrmUserCommandHandler)
         {
             _crmServiceManager = crmServiceManager;
             _getCrmUserHandler = getCrmUserHandler;
+            _truncateCrmUserCommandHandler = truncateCrmUserCommandHandler;
         }
 
         [HttpPost("getcrmuserfromservice")]
@@ -39,6 +42,11 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
             return await _getCrmUserHandler.GetCrmUserFromDb();
         }
 
+        [HttpPost("truncatecrmuserfromdb")]
+        public async Task<TruncateCrmUserCommandServiceResponse> TruncateCrmUserFromDb(TruncateCrmUserCommandRequest truncateCrmUserCommandRequest)
+        {
+            return await _truncateCrmUserCommandHandler.TruncateCrmUser(truncateCrmUserCommandRequest);
+        }
 
 
     }

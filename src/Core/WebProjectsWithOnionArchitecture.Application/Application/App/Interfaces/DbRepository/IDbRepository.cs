@@ -14,6 +14,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.App.Interface
         Task<int> AddAsync(T type);
         Task<int> AddRangeAsync(List<T> type);
         Task<int> UpdateAsync(T type, Guid guid);
+        Task<int> TruncateAsync();
 
 
     }

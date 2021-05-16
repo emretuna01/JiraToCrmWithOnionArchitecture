@@ -56,5 +56,13 @@ namespace WebProjectsWithOnionArchitecture.Persist.Persist.App.Common
             return await _applicationDbContext.SaveChangesAsync();
 
         }
+
+        public async Task<int> TruncateAsync()
+        {
+                         Table.RemoveRange(await Table.ToListAsync());
+            return await _applicationDbContext.SaveChangesAsync();
+            
+        }
+
     }
 }

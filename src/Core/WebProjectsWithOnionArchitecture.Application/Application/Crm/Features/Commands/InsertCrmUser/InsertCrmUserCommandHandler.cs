@@ -26,14 +26,14 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.
             _insertCrmUserCommandServiceResponse = insertCrmUserCommandServiceResponse;
         }
 
-        public async Task<InsertCrmUserCommandServiceResponse> InsertCrmUser(Task<IRestResponse> restResponse)
+        public async Task<InsertCrmUserCommandServiceResponse> InsertCrmUser(IRestResponse restResponse)
         {
-            var json = JObject.Parse(restResponse.Result.Content)["value"].ToString();
+            var json = JObject.Parse(restResponse.Content)["value"].ToString();
             var insertdata=JsonConvert.DeserializeObject<List<InsertCrmUserCommandResponse>>(json);
             var mappeddata= _mapper.Map<List<CrmUser>>(insertdata);
             var count= await _crmUserRepository.AddRangeAsync(mappeddata);
 
-            _insertCrmUserCommandServiceResponse.Message = count.ToString() + EnumHolders.ResponseMessages.AddedSuccessfully.ToString();
+            _insertCrmUserCommandServiceResponse.Message = count.ToString() + EnumHolders.ResponseMessages.Added.ToString();
             _insertCrmUserCommandServiceResponse.IsSuccessfull = count >= 0 ? EnumHolders.ResponseStatus.True.ToString() : EnumHolders.ResponseStatus.False.ToString();
 
             return _insertCrmUserCommandServiceResponse;
