@@ -17,24 +17,24 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
     {
         //TODO: JWT token architecture will be added        
         private readonly IOptions<Configuration> _configuration;
+        private readonly Configuration _bconfiguration;
         private readonly RestSharpFactory _restSharpFactory;
         private readonly GetUserByNameHandler _getUserByNameHandler;
-        
 
 
-        public CrmServicesUtilities(IOptions<Configuration> configuration, RestSharpFactory restSharpFactory, GetUserByNameHandler getUserByNameHandler)
+
+        public CrmServicesUtilities(IOptions<Configuration> configuration, RestSharpFactory restSharpFactory, GetUserByNameHandler getUserByNameHandler, Configuration bconfiguration)
         {
 
             _configuration = configuration;
             _restSharpFactory = restSharpFactory;
             _getUserByNameHandler = getUserByNameHandler;
+            _bconfiguration = bconfiguration;
         }
 
         public string GetCrmTypeAdress(string parameter)
-        {
-            var t2 = _configuration.Value.GetType().GetProperty(parameter);//.GetValue(_configuration);
-            var t= _configuration.Value.CrmDefaultLink + _configuration.Value.GetType().GetProperty(parameter)?.GetValue(_configuration);
-            return null;
+        {             
+            return _configuration.Value.CrmDefaultLink + _configuration.Value.GetType().GetProperty(parameter).GetValue(_configuration.Value);
         }
         public string GetRequestContentType()
         {

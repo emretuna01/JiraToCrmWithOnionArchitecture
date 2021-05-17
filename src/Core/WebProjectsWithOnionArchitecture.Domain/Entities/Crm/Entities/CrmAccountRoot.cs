@@ -10,7 +10,7 @@ using WebProjectsWithOnionArchitecture.Domain.Entities.App.Common;
 namespace WebProjectsWithOnionArchitecture.Domain.Entities.Crm.Entities
 {
 
-    public class CrmAccountValue
+    public class CrmAccountValue : BaseEntity
     {
         public string OdataEtag { get; set; }
         public int? customertypecode { get; set; }
