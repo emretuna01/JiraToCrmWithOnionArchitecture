@@ -12,7 +12,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Interface
     {
         public DbSet<CrmUser> CrmUsers { get; set; }
         public DbSet<CrmTask> CrmTasks { get; set; }
-        public DbSet<CrmAccount> CrmAccounts { get; set; }
+        public DbSet<CrmAccountRoot> CrmAccounts { get; set; }
 
     }
 }

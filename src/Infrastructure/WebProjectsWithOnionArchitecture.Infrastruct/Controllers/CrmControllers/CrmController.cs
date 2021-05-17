@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmUser;
+using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Queries.GetCrmAccount;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Queries.GetCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.TruncateCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
@@ -27,7 +28,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         [HttpPost("getcrmuserfromservice")]
         public async Task<string> GetCrmUserFromService(GetCrmUserRequest getCrmUserRequest)
         {
-            return (await _crmServiceManager.RequestSenderManager(getCrmUserRequest)).Content;
+            return await _crmServiceManager.GetCrmUserManager(getCrmUserRequest);
         }
 
         [HttpPost("insertcrmuser")]
@@ -47,6 +48,13 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         {
             return await _truncateCrmUserCommandHandler.TruncateCrmUser(truncateCrmUserCommandRequest);
         }
+
+        [HttpPost("getcrmaccountfromservice")]
+        public async Task<string> GetCrmAccountFromService(GetCrmAccountRequest getCrmAccountRequest)
+        {
+            return null;
+        }
+
 
 
     }

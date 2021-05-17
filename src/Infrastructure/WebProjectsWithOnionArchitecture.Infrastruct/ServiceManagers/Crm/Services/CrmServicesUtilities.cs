@@ -30,9 +30,11 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             _getUserByNameHandler = getUserByNameHandler;
         }
 
-        public string GetCrmUserAdress()
+        public string GetCrmTypeAdress(string parameter)
         {
-            return _configuration.Value.CrmDefaultLink + _configuration.Value.SystemUser;
+            var t2 = _configuration.Value.GetType().GetProperty(parameter);//.GetValue(_configuration);
+            var t= _configuration.Value.CrmDefaultLink + _configuration.Value.GetType().GetProperty(parameter)?.GetValue(_configuration);
+            return null;
         }
         public string GetRequestContentType()
         {

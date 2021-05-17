@@ -5,7 +5,7 @@ using WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbContext;
 
 namespace WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbRepositories
 {
-    public class CrmAccountRepository : DbRepository<CrmAccount>, ICrmAccountRepository
+    public class CrmAccountRepository : DbRepository<CrmAccountRoot>, ICrmAccountRepository
     {
         public CrmAccountRepository(ApplicationCrmDbContext applicationDbContext) : base(applicationDbContext)
         {

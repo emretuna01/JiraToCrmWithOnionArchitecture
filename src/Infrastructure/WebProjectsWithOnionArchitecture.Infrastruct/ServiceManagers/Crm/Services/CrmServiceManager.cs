@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.Queries;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmUser;
+using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Services
 {
@@ -19,9 +20,9 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             _insertCrmUserCommandHandler = insertCrmUserCommandHandler;
         }
 
-        public async Task<IRestResponse> RequestSenderManager(IRequestQuery requestQuery, Method method = 0)
+        public async Task<IRestResponse> RequestSenderManager(IRequestQuery requestQuery,string crmType ,Method method = 0)
         {
-            var url = _crmServicesUtilities.GetCrmUserAdress();
+            var url = _crmServicesUtilities.GetCrmTypeAdress(crmType);
             var contentType = _crmServicesUtilities.GetRequestContentType();
             var user = _crmServicesUtilities.GetUserByNameFromDbCheck(requestQuery);
             var authenticator = _crmServicesUtilities.NtlmAuthenticatorByCredentials(user);
@@ -30,11 +31,17 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return await _crmServicesUtilities.RequestSender(resClient, resRequest);
         }
 
-        public async Task<InsertCrmUserCommandServiceResponse> InsertCrmUserManager(GetUserByNameRequest getUserByNameRequest, Method method = 0)
+        public async Task<string> GetCrmUserManager(GetCrmUserRequest getCrmUserRequest, string crmType= "SystemUser")
         {
-            IRestResponse restResponse = await RequestSenderManager(getUserByNameRequest);
+            return (await RequestSenderManager(getCrmUserRequest, crmType)).Content;
+        }
+
+        public async Task<InsertCrmUserCommandServiceResponse> InsertCrmUserManager(GetUserByNameRequest getUserByNameRequest, string crmType= "SystemUser")
+        {
+            IRestResponse restResponse = await RequestSenderManager(getUserByNameRequest, crmType);
             return await _insertCrmUserCommandHandler.InsertCrmUser(restResponse);
         }
+
 
 
 
