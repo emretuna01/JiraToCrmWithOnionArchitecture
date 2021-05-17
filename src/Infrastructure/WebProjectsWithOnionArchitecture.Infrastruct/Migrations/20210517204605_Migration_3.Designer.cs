@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebProjectsWithOnionArchitecture.Persist.Persist.Crm.DbContext;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.Migrations
 {
     [DbContext(typeof(ApplicationCrmDbContext))]
-    partial class ApplicationCrmDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210517204605_Migration_3")]
+    partial class Migration_3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
