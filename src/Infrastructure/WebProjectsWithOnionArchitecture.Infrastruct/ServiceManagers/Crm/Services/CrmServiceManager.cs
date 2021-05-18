@@ -32,6 +32,17 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return await _crmServicesUtilities.RequestSender(resClient, resRequest);
         }
 
+        public async Task<IRestResponse> RequestSenderManager(IRequestQuery requestQuery, string crmType, bool isRecursive ,Method method = 0)
+        {
+            var url = _crmServicesUtilities.GetCrmTypeAdress(crmType);
+            var contentType = _crmServicesUtilities.GetRequestContentType();
+            var user = _crmServicesUtilities.GetUserByNameFromDbCheck(requestQuery);
+            var authenticator = _crmServicesUtilities.NtlmAuthenticatorByCredentials(user);
+            var resClient = _crmServicesUtilities.PrepareRestClient(url, authenticator);
+            var resRequest = _crmServicesUtilities.PrepareRestRequest(method, contentType);
+            return await _crmServicesUtilities.RequestSender(resClient, resRequest);
+        }
+
         public async Task<string> GetCrmUserManager(GetCrmUserRequest getCrmUserRequest, string crmType= "SystemUser")
         {
             return (await RequestSenderManager(getCrmUserRequest, crmType)).Content;
