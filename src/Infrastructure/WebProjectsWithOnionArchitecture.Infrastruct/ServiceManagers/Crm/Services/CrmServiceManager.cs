@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Interfaces.Queries;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmUser;
+using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Queries.GetCrmAccount;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Queries.GetCrmUser;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Services
@@ -42,6 +43,10 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return await _insertCrmUserCommandHandler.InsertCrmUser(restResponse);
         }
 
+        public async Task<string> GetCrmAccountManager(GetCrmAccountRequest getCrmAccountRequest, string crmType = "Account")
+        {
+            return (await RequestSenderManager(getCrmAccountRequest, crmType)).Content;
+        }
 
 
 
