@@ -41,6 +41,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             var resClient = _crmServicesUtilities.PrepareRestClient(url, authenticator);
             var resRequest = _crmServicesUtilities.PrepareRestRequest(method, contentType);
             return await _crmServicesUtilities.RequestSender(resClient, resRequest);
+
         }
 
         public async Task<string> GetCrmUserManager(GetCrmUserRequest getCrmUserRequest, string crmType= "SystemUser")
