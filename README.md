@@ -1,6 +1,6 @@
 <h2 align="left">JiraToCrmWithOnionArchitecture</h2>
 <p>
-In this project Jira Service Management by Atlassian and CRM Dynamics 365 by Microsoft are integrated. In general Jira is used for software support services whereas Dynamics 365 is used for combining CRM and ERP capabilities or to track business processes and costs.
+In this project Jira Service Management by Atlassian and CRM Dynamics 365 by Microsoft are integrated. In general Jira Service Management is used for software support services whereas Dynamics 365 is used for combining CRM and ERP capabilities or to track business processes and costs.
 </p>
 
 <h3> Design Pattern,Libraries, technologies and databases used in this project:</h3>
