@@ -21,8 +21,8 @@ In this project Jira Service Management by Atlassian and CRM Dynamics 365 by Mic
 
 <p align="left">
 This application is written in ASP.NET core framework. For more details on onion architecture and reference project you can check: 
-<a target="_blank" href="https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/">this</a>
-<a target="_blank" href="https://codewithmukesh.com/blog/onion-architecture-in-aspnet-core/">or this</a>
+<a  target="_blank" href="https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/">this</a>
+<a  target="_blank" href="https://codewithmukesh.com/blog/onion-architecture-in-aspnet-core/">or this</a>
 </p>
 <p align="left">
 There are mainly 5 layers in this project which can be listed in 3 main groups:
@@ -41,4 +41,8 @@ Group 3: Presentation;
 It includes presentation layer in which interfaces that are shown to users are designed.
 
 In onion architectures the direction is from the outside in. The need for a side referencing should be met by creating a common sub layer.
+</p>
+
+<p>
+Project has not been completed yet,works is continuing 
 </p>
