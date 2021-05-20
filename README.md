@@ -44,5 +44,5 @@ In onion architectures the direction is from the outside in. The need for a side
 </p>
 
 <p>
-Project has not been completed yet,works is continuing 
+Project has not been completed yet, works is continuing 
 </p>
