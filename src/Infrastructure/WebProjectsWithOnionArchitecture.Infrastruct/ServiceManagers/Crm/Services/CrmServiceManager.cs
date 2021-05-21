@@ -29,7 +29,8 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             var authenticator = _crmServicesUtilities.NtlmAuthenticatorByCredentials(user);
             var resClient = _crmServicesUtilities.PrepareRestClient(url, authenticator);
             var resRequest = _crmServicesUtilities.PrepareRestRequest(method, contentType);
-            return await _crmServicesUtilities.RequestSender(resClient, resRequest);
+            //  return await _crmServicesUtilities.RequestSender(resClient, resRequest);
+            return await _crmServicesUtilities.RequestRecursiveSender(resClient, resRequest);
         }
 
         public async Task<IRestResponse> RequestRecursiveSenderManager(IRequestQuery requestQuery, string crmType, Method method = 0)
