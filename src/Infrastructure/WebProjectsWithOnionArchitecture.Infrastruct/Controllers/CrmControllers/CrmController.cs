@@ -52,7 +52,8 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         [HttpPost("getcrmaccountfromservice")]
         public async Task<string> GetCrmAccountFromService(GetCrmAccountRequest getCrmAccountRequest)
         {
-            return await _crmServiceManager.GetCrmAccountManager(getCrmAccountRequest);
+            return  await _crmServiceManager.GetCrmAccountManager(getCrmAccountRequest);
+            
         }
 
 

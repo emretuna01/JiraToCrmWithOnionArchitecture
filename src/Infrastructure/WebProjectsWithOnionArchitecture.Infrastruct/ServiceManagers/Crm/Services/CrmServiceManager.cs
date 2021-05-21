@@ -32,7 +32,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return await _crmServicesUtilities.RequestSender(resClient, resRequest);
         }
 
-        public async Task<IRestResponse> RequestSenderManager(IRequestQuery requestQuery, string crmType, bool isRecursive ,Method method = 0)
+        public async Task<IRestResponse> RequestRecursiveSenderManager(IRequestQuery requestQuery, string crmType, Method method = 0)
         {
             var url = _crmServicesUtilities.GetCrmTypeAdress(crmType);
             var contentType = _crmServicesUtilities.GetRequestContentType();

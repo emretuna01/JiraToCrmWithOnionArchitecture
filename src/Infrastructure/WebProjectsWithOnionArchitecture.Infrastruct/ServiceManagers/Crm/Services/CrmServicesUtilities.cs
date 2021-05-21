@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Authenticators;
 using System;
@@ -74,7 +75,13 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return await restClient.ExecuteAsync(restRequest);
         }
 
-        
+        public async Task<IRestResponse> RequestRecursiveSender<T>(RestClient restClient, RestRequest restRequest)
+        {
+            IRestResponse result =await restClient.ExecuteAsync(restRequest);
+            T resultWithType= JsonConvert.DeserializeObject<T>(result.Content);
+            return null;
+        }
+
 
 
 
