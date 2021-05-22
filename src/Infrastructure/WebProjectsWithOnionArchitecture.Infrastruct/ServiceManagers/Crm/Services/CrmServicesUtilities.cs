@@ -76,16 +76,17 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return await restClient.ExecuteAsync(restRequest);
         }
 
-        public async Task<IRestResponse> RequestRecursiveSender(RestClient restClient, RestRequest restRequest)
+        public async Task<Tuple<IRestResponse, String>> RequestRecursiveSender(RestClient restClient, RestRequest restRequest)
         {
             String nextLink;
+            IRestResponse result;
             do
             {
-                IRestResponse result = await restClient.ExecuteAsync(restRequest);
+                result=await restClient.ExecuteAsync(restRequest);
                 nextLink = ((JObject)JsonConvert.DeserializeObject(result.Content)).Last.Last().ToString();
             } while (String.IsNullOrEmpty(nextLink));
   
-            return null;
+            return Tuple.Create(result, nextLink);
         }
        
         
