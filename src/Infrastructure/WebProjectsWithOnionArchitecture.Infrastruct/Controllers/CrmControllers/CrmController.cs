@@ -55,6 +55,13 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
             return  await _crmServiceManager.GetCrmAccountManager(getCrmAccountRequest);            
         }
 
+        [HttpPost("insertcrmaccount")]
+        public async Task<InsertCrmUserCommandServiceResponse> InsertCrmAccountFromService(GetUserByNameRequest getUserByNameRequest)
+        {
+            return null;
+        }
+
+
 
 
     }

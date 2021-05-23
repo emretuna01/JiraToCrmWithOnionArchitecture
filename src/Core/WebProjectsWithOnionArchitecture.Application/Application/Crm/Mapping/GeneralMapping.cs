@@ -16,6 +16,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Mapping
         {
             CreateMap<CrmUser, InsertCrmUserCommandResponse>().ReverseMap();
             CreateMap<CrmUser, GetCrmUserResponse>().ReverseMap();
+            CreateMap<>
         }
         
     }

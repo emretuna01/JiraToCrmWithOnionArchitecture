@@ -68,6 +68,10 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
         {
             return (await RequestRecursiveSenderManager(getCrmAccountRequest, crmType));
         }
+        public async Task<InsertCrmAccountCommandServiceResponse> GetCrmAccountManager(GetCrmAccountRequest getCrmAccountRequest, string crmType = "Account")
+        {
+            return (await RequestRecursiveSenderManager(getCrmAccountRequest, crmType));
+        }
 
 
 

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Commands.InsertUser;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUser;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
+using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmAccount;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Queries.GetCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Crm.Features.Commands.TruncateCrmUser;
@@ -21,7 +22,6 @@ namespace WebProjectsWithOnionArchitecture.Application
         public static void AddApplicationServices(this IServiceCollection serviceCollection)
         {
             //TODO:MediatR library will be added here.           
-
             serviceCollection.AddTransient<InsertUserCommandHandler>();
             serviceCollection.AddTransient<User>();
             serviceCollection.AddTransient<InsertUserCommandResponse>();
@@ -36,14 +36,7 @@ namespace WebProjectsWithOnionArchitecture.Application
             serviceCollection.AddAutoMapper(Assembly.GetExecutingAssembly());
             serviceCollection.AddTransient<TruncateCrmUserCommandServiceResponse>();
             serviceCollection.AddTransient<TruncateCrmUserCommandHandler>();
-            
-
-
-
-
-
-
-
+            serviceCollection.AddTransient<InsertCrmAccountCommandServiceResponse>();
 
         }
     }
