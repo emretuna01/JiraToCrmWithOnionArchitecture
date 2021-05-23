@@ -34,9 +34,11 @@ namespace WebProjectsWithOnionArchitecture.Application
             serviceCollection.AddTransient<InsertCrmUserCommandServiceResponse>();
             serviceCollection.AddTransient<GetCrmUserHandler>();
             serviceCollection.AddAutoMapper(Assembly.GetExecutingAssembly());
-            serviceCollection.AddTransient<TruncateCrmUserCommandServiceResponse>();
             serviceCollection.AddTransient<TruncateCrmUserCommandHandler>();
+            serviceCollection.AddTransient<TruncateCrmUserCommandServiceResponse>();            
+            serviceCollection.AddTransient<InsertCrmAccountCommandHandler>();
             serviceCollection.AddTransient<InsertCrmAccountCommandServiceResponse>();
+            
 
         }
     }

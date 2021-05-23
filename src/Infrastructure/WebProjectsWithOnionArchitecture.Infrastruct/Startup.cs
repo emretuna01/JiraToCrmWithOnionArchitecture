@@ -17,6 +17,7 @@ using WebProjectsWithOnionArchitecture.Domain;
 using WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Common;
 using WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Services;
 using WebProjectsWithOnionArchitecture.Persist;
+using System.Reflection;
 
 namespace WebProjectsWithOnionArchitecture.Infrastruct
 {
@@ -40,9 +41,9 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
             serviceCollection.AddTransient<CrmServiceManager>();
             serviceCollection.Configure<Configuration>(option => Configuration.GetSection("CrmRootParameters").Bind(option));
             serviceCollection.AddTransient<Configuration>();
-            serviceCollection.AddTransient<RestSharpFactory>();
-            serviceCollection.AddTransient<List<string>>();            
+            serviceCollection.AddTransient<RestSharpFactory>();              
             serviceCollection.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo());});
+            
 
         }
 

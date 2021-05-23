@@ -18,11 +18,13 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         private readonly CrmServiceManager _crmServiceManager;
         private readonly GetCrmUserHandler _getCrmUserHandler;
         private readonly TruncateCrmUserCommandHandler _truncateCrmUserCommandHandler;
+        
         public CrmController(CrmServiceManager crmServiceManager, GetCrmUserHandler getCrmUserHandler, TruncateCrmUserCommandHandler truncateCrmUserCommandHandler)
         {
             _crmServiceManager = crmServiceManager;
             _getCrmUserHandler = getCrmUserHandler;
             _truncateCrmUserCommandHandler = truncateCrmUserCommandHandler;
+        
         }
 
         [HttpPost("getcrmuserfromservice")]
@@ -50,7 +52,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         }
 
         [HttpPost("getcrmaccountfromservice")]
-        public async Task<List<string>> GetCrmAccountFromService(GetCrmAccountRequest getCrmAccountRequest)
+        public async Task<string> GetCrmAccountFromService(GetCrmAccountRequest getCrmAccountRequest)
         {
             return  await _crmServiceManager.GetCrmAccountManager(getCrmAccountRequest);            
         }
@@ -58,7 +60,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         [HttpPost("insertcrmaccount")]
         public async Task<InsertCrmUserCommandServiceResponse> InsertCrmAccountFromService(GetUserByNameRequest getUserByNameRequest)
         {
-            return null;
+            return await _crmServiceManager.InsertCrmAccountManager(getUserByNameRequest);
         }
 
 
