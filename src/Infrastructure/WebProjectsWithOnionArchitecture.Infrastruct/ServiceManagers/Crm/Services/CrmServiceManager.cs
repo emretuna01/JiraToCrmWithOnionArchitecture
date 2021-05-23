@@ -78,7 +78,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
         {
             var mappedData = _mapper.Map<GetCrmAccountRequest>(getUserByNameRequest);
             var requestResponse = await GetCrmAccountManager(mappedData);
-            return _insertCrmAccountCommandHandler.InsertCrmAccount(requestResponse);
+            return await _insertCrmAccountCommandHandler.InsertCrmAccount(requestResponse);
         }
 
 

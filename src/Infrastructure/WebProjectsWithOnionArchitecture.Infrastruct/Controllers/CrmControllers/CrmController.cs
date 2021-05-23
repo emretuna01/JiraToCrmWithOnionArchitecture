@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebProjectsWithOnionArchitecture.Application.Application.App.Features.Queries.GetUserByName;
+using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmAccount;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Commands.InsertCrmUser;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Queries.GetCrmAccount;
 using WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.Queries.GetCrmUser;
@@ -58,7 +59,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         }
 
         [HttpPost("insertcrmaccount")]
-        public async Task<InsertCrmUserCommandServiceResponse> InsertCrmAccountFromService(GetUserByNameRequest getUserByNameRequest)
+        public async Task<InsertCrmAccountCommandServiceResponse> InsertCrmAccountFromService(GetUserByNameRequest getUserByNameRequest)
         {
             return await _crmServiceManager.InsertCrmAccountManager(getUserByNameRequest);
         }

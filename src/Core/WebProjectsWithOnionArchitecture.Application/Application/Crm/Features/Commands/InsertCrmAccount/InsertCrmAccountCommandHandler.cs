@@ -33,7 +33,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.
             _insertCrmAccountCommandServiceResponse.Message = count.ToString() + EnumHolders.ResponseMessages.Added.ToString();
             _insertCrmAccountCommandServiceResponse.IsSuccessfull = count >= 0 ? EnumHolders.ResponseStatus.True.ToString() : EnumHolders.ResponseStatus.False.ToString();
 
-            return _insertCrmAccountCommandServiceResponse;
+            return  _insertCrmAccountCommandServiceResponse;
         }
 
     }
