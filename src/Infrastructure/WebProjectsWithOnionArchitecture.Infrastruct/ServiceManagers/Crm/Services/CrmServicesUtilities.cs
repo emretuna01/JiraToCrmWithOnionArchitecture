@@ -23,8 +23,6 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
         private readonly RestSharpFactory _restSharpFactory;
         private readonly GetUserByNameHandler _getUserByNameHandler;
 
-
-
         public CrmServicesUtilities(IOptions<Configuration> configuration, RestSharpFactory restSharpFactory, GetUserByNameHandler getUserByNameHandler, Configuration bconfiguration)
         {
 
@@ -35,24 +33,22 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
         }
 
         public string GetCrmTypeAdress(string parameter)
-        {             
+        {
             return _configuration.Value.CrmDefaultLink + _configuration.Value.GetType().GetProperty(parameter).GetValue(_configuration.Value);
         }
         public string GetRequestContentType()
         {
             return _configuration.Value.ContentType;
         }
-        public async  Task<GetUserByNameResponse> GetUserByNameFromDbCheck(IRequestQuery requestQuery)
+        public async Task<GetUserByNameResponse> GetUserByNameFromDbCheck(IRequestQuery requestQuery)
         {
             return await _getUserByNameHandler.GetUserByNameFromDb(requestQuery);
         }
-
         public NtlmAuthenticator NtlmAuthenticatorByCredentials(Task<GetUserByNameResponse> getUserByNameResponse)
         {
             //TODO: instead of new keyword find another solution
             return _restSharpFactory.NtlmAuthenticator = new NtlmAuthenticator(getUserByNameResponse.Result.UserName, getUserByNameResponse.Result.Password);
         }
-
         public RestClient PrepareRestClient(string url, NtlmAuthenticator ntlmAuthenticator, int timeout = -1)
         {
             //TODO: instead of new keyword find another solution
@@ -62,37 +58,23 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return _restSharpFactory.RestClient;
 
         }
-
         public RestRequest PrepareRestRequest(Method method, string contentType)
         {
             //TODO: instead of new keyword find another solution
             _restSharpFactory.RestRequest = new RestRequest(method);
             _restSharpFactory.RestRequest.AddHeader("Content-Type", contentType);
             return _restSharpFactory.RestRequest;
-        }        
-
+        }
         public async Task<IRestResponse> RequestSender(RestClient restClient, RestRequest restRequest)
         {
             return await restClient.ExecuteAsync(restRequest);
         }
-
         public async Task<Tuple<IRestResponse, String>> RequestRecursiveSender(RestClient restClient, RestRequest restRequest)
         {
-            String nextLink;
-            IRestResponse result;
-            do
-            {
-                result=await restClient.ExecuteAsync(restRequest);
-                nextLink = ((JObject)JsonConvert.DeserializeObject(result.Content)).Last.Last().ToString();
-            } while (String.IsNullOrEmpty(nextLink));
-  
+            IRestResponse result = await restClient.ExecuteAsync(restRequest);            
+            String nextLink = ((JObject)JsonConvert.DeserializeObject(result.Content))["@odata.nextLink"]?.ToString();         
             return Tuple.Create(result, nextLink);
         }
-       
-        
-         
 
-
-
-}
+    }
 }

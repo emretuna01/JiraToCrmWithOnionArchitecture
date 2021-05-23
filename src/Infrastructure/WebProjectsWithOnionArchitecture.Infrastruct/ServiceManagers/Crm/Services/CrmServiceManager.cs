@@ -15,25 +15,15 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
     {
         private readonly CrmServicesUtilities _crmServicesUtilities;
         private readonly InsertCrmUserCommandHandler _insertCrmUserCommandHandler;
-        public CrmServiceManager(CrmServicesUtilities crmServicesUtilities, InsertCrmUserCommandHandler insertCrmUserCommandHandler)
+        private readonly List<string> _resultResponseList;
+        public CrmServiceManager(CrmServicesUtilities crmServicesUtilities, InsertCrmUserCommandHandler insertCrmUserCommandHandler, List<string> resultResponseList)
         {
             _crmServicesUtilities = crmServicesUtilities;
             _insertCrmUserCommandHandler = insertCrmUserCommandHandler;
+            _resultResponseList = resultResponseList;
         }
 
-        public async Task<IRestResponse> RequestSenderManager(IRequestQuery requestQuery,string crmType ,Method method = 0)
-        {
-            var url = _crmServicesUtilities.GetCrmTypeAdress(crmType);
-            var contentType = _crmServicesUtilities.GetRequestContentType();
-            var user = _crmServicesUtilities.GetUserByNameFromDbCheck(requestQuery);
-            var authenticator = _crmServicesUtilities.NtlmAuthenticatorByCredentials(user);
-            var resClient = _crmServicesUtilities.PrepareRestClient(url, authenticator);
-            var resRequest = _crmServicesUtilities.PrepareRestRequest(method, contentType);
-            //  return await _crmServicesUtilities.RequestSender(resClient, resRequest);
-            return await _crmServicesUtilities.RequestRecursiveSender(resClient, resRequest);
-        }
-
-        public async Task<IRestResponse> RequestRecursiveSenderManager(IRequestQuery requestQuery, string crmType, Method method = 0)
+        public async Task<IRestResponse>  RequestSenderManager(IRequestQuery requestQuery,string crmType ,Method method = 0)
         {
             var url = _crmServicesUtilities.GetCrmTypeAdress(crmType);
             var contentType = _crmServicesUtilities.GetRequestContentType();
@@ -42,10 +32,28 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             var resClient = _crmServicesUtilities.PrepareRestClient(url, authenticator);
             var resRequest = _crmServicesUtilities.PrepareRestRequest(method, contentType);
             return await _crmServicesUtilities.RequestSender(resClient, resRequest);
-
         }
 
-        public async Task<string> GetCrmUserManager(GetCrmUserRequest getCrmUserRequest, string crmType= "SystemUser")
+        public async Task<List<string>> RequestRecursiveSenderManager(IRequestQuery requestQuery, string crmType, Method method = 0)
+        {
+            Tuple<IRestResponse, String> resultTuple;
+            var url = _crmServicesUtilities.GetCrmTypeAdress(crmType);
+            var contentType = _crmServicesUtilities.GetRequestContentType();
+            var resRequest = _crmServicesUtilities.PrepareRestRequest(method, contentType);
+            var user = _crmServicesUtilities.GetUserByNameFromDbCheck(requestQuery);
+            var authenticator = _crmServicesUtilities.NtlmAuthenticatorByCredentials(user);
+            do
+            {
+                var resClient = _crmServicesUtilities.PrepareRestClient(url, authenticator);
+                resultTuple = await _crmServicesUtilities.RequestRecursiveSender(resClient, resRequest);
+                _resultResponseList.Add(resultTuple.Item1.Content);
+                url = String.IsNullOrEmpty(resultTuple.Item2) ? null : resultTuple.Item2;
+            } while (String.IsNullOrEmpty(resultTuple.Item2) == false);
+
+            return _resultResponseList;
+        }
+
+        public async Task<string>GetCrmUserManager(GetCrmUserRequest getCrmUserRequest, string crmType= "SystemUser")
         {
             return (await RequestSenderManager(getCrmUserRequest, crmType)).Content;
         }
@@ -56,9 +64,9 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return await _insertCrmUserCommandHandler.InsertCrmUser(restResponse);
         }
 
-        public async Task<string> GetCrmAccountManager(GetCrmAccountRequest getCrmAccountRequest, string crmType = "Account")
+        public async Task<List<string>> GetCrmAccountManager(GetCrmAccountRequest getCrmAccountRequest, string crmType = "Account")
         {
-            return (await RequestSenderManager(getCrmAccountRequest, crmType)).Content;
+            return (await RequestRecursiveSenderManager(getCrmAccountRequest, crmType));
         }
 
 

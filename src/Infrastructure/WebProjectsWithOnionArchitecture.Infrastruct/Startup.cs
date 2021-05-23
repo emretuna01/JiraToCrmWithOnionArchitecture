@@ -41,6 +41,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
             serviceCollection.Configure<Configuration>(option => Configuration.GetSection("CrmRootParameters").Bind(option));
             serviceCollection.AddTransient<Configuration>();
             serviceCollection.AddTransient<RestSharpFactory>();
+            serviceCollection.AddTransient<List<string>>();            
             serviceCollection.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo());});
 
         }
