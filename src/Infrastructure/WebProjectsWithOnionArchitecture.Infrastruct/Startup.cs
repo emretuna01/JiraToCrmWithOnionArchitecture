@@ -43,7 +43,8 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct
             serviceCollection.AddTransient<Configuration>();
             serviceCollection.AddTransient<RestSharpFactory>();              
             serviceCollection.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo());});
-            
+            serviceCollection.AddTransient<List<string>>();
+
 
         }
 

@@ -17,6 +17,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.
         private readonly IMapper _mapper;
         private readonly InsertCrmAccountCommandServiceResponse _insertCrmAccountCommandServiceResponse;
 
+
         public InsertCrmAccountCommandHandler(ICrmAccountRepository crmAccountRepository, InsertCrmAccountCommandServiceResponse insertCrmAccountCommandServiceResponse, IMapper mapper)
         {
             _crmAccountRepository = crmAccountRepository;
@@ -24,16 +25,23 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.
             _mapper = mapper;
         }
 
-        public async Task<InsertCrmAccountCommandServiceResponse> InsertCrmAccount(string requestResult)
+        public async Task<InsertCrmAccountCommandServiceResponse> InsertCrmAccount(List<string> requestResult)
         {
-            var insertData = JsonConvert.DeserializeObject<List<InsertCrmAccountCommandResponseRoot>>(requestResult);
-            var mappedData = _mapper.Map<List<CrmAccountRoot>>(insertData);
-            var count = await _crmAccountRepository.AddRangeAsync(mappedData);
+            int count =0;
+
+            foreach (var result in requestResult)
+            {
+                var insertData = JsonConvert.DeserializeObject<InsertCrmAccountCommandResponseRoot>(result);
+          
+                var mappedData = _mapper.Map<CrmAccountRoot>(insertData);
+            
+                count = count + await _crmAccountRepository.AddAsync(mappedData);
+           
+            }
 
             _insertCrmAccountCommandServiceResponse.Message = count.ToString() + EnumHolders.ResponseMessages.Added.ToString();
             _insertCrmAccountCommandServiceResponse.IsSuccessfull = count >= 0 ? EnumHolders.ResponseStatus.True.ToString() : EnumHolders.ResponseStatus.False.ToString();
-
-            return  _insertCrmAccountCommandServiceResponse;
+            return _insertCrmAccountCommandServiceResponse;
         }
 
     }

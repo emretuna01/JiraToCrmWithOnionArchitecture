@@ -21,8 +21,9 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Mapping
             CreateMap<CrmUser, GetCrmUserResponse>().ReverseMap();
             CreateMap<CrmAccountRoot, InsertCrmAccountCommandResponseRoot>().ReverseMap();
             CreateMap<GetCrmAccountRequest, GetUserByNameRequest>().ReverseMap();
-            CreateMap<CrmAccountRoot, InsertCrmAccountCommandResponseRoot>().ReverseMap();
+            CreateMap<CrmAccountRoot, InsertCrmAccountCommandResponseRoot>().ForMember(p => p.InsertCrmAccountCommandResponse, opt => opt.MapFrom(z => z.CrmAccountList));
             
+
         }
         
     }

@@ -38,7 +38,10 @@ namespace WebProjectsWithOnionArchitecture.Application
             serviceCollection.AddTransient<TruncateCrmUserCommandServiceResponse>();            
             serviceCollection.AddTransient<InsertCrmAccountCommandHandler>();
             serviceCollection.AddTransient<InsertCrmAccountCommandServiceResponse>();
+           
             
+
+
 
         }
     }

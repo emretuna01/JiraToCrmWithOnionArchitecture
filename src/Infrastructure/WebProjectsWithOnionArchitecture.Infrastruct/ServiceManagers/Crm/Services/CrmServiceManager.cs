@@ -19,12 +19,15 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
         private readonly InsertCrmUserCommandHandler _insertCrmUserCommandHandler;
         private readonly InsertCrmAccountCommandHandler _insertCrmAccountCommandHandler;
         private readonly IMapper _mapper;
+        private readonly List<string> _resultResponse;
 
-        public CrmServiceManager(CrmServicesUtilities crmServicesUtilities, InsertCrmUserCommandHandler insertCrmUserCommandHandler, IMapper mapper)
+        public CrmServiceManager(CrmServicesUtilities crmServicesUtilities, InsertCrmUserCommandHandler insertCrmUserCommandHandler, IMapper mapper, InsertCrmAccountCommandHandler insertCrmAccountCommandHandler, List<string> resultResponse)
         {
             _crmServicesUtilities = crmServicesUtilities;
             _insertCrmUserCommandHandler = insertCrmUserCommandHandler;
             _mapper = mapper;
+            _insertCrmAccountCommandHandler = insertCrmAccountCommandHandler;
+            _resultResponse = resultResponse;
         }
 
         public async Task<IRestResponse>  RequestSenderManager(IRequestQuery requestQuery,string crmType ,Method method = 0)
@@ -38,10 +41,9 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return await _crmServicesUtilities.RequestSender(resClient, resRequest);
         }
 
-        public async Task<string> RequestRecursiveSenderManager(IRequestQuery requestQuery, string crmType, Method method = 0)
+        public async Task<List<string>> RequestRecursiveSenderManager(IRequestQuery requestQuery, string crmType, Method method = 0)
         {
-            Tuple<IRestResponse, String> resultTuple;
-            String _resultResponse=null;
+            Tuple<IRestResponse, String> resultTuple;   
             var url = _crmServicesUtilities.GetCrmTypeAdress(crmType);
             var contentType = _crmServicesUtilities.GetRequestContentType();
             var resRequest = _crmServicesUtilities.PrepareRestRequest(method, contentType);
@@ -50,8 +52,8 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             do
             {
                 var resClient = _crmServicesUtilities.PrepareRestClient(url, authenticator);
-                resultTuple = await _crmServicesUtilities.RequestRecursiveSender(resClient, resRequest);
-                _resultResponse = _resultResponse + resultTuple.Item1.Content;
+                resultTuple = await _crmServicesUtilities.RequestRecursiveSender(resClient, resRequest);                
+                _resultResponse.Add(resultTuple.Item1.Content);
                 url = String.IsNullOrEmpty(resultTuple.Item2) ? null : resultTuple.Item2;
             } while (String.IsNullOrEmpty(resultTuple.Item2) == false);
 
@@ -70,15 +72,16 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.ServiceManagers.Crm.Servi
             return await _insertCrmUserCommandHandler.InsertCrmUser(restResponse);
         }
 
-        public async Task<string> GetCrmAccountManager(GetCrmAccountRequest getCrmAccountRequest, string crmType = "Account")
+        public async Task<List<string>> GetCrmAccountManager(GetCrmAccountRequest getCrmAccountRequest, string crmType = "Account")
         {
             return (await RequestRecursiveSenderManager(getCrmAccountRequest, crmType));
         }
         public async Task<InsertCrmAccountCommandServiceResponse> InsertCrmAccountManager(GetUserByNameRequest getUserByNameRequest)
         {
             var mappedData = _mapper.Map<GetCrmAccountRequest>(getUserByNameRequest);
-            var requestResponse = await GetCrmAccountManager(mappedData);
+            List<string> requestResponse = await GetCrmAccountManager(mappedData);
             return await _insertCrmAccountCommandHandler.InsertCrmAccount(requestResponse);
+             
         }
 
 
