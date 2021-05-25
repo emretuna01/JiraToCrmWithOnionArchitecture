@@ -18,11 +18,10 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Mapping
         public GeneralMapping()
         {
             CreateMap<CrmUser, InsertCrmUserCommandResponse>().ReverseMap();
-            CreateMap<CrmUser, GetCrmUserResponse>().ReverseMap();
-            CreateMap<CrmAccountRoot, InsertCrmAccountCommandResponseRoot>().ReverseMap();
+            CreateMap<CrmUser, GetCrmUserResponse>().ReverseMap();       
             CreateMap<GetCrmAccountRequest, GetUserByNameRequest>().ReverseMap();
-            CreateMap<CrmAccountRoot, InsertCrmAccountCommandResponseRoot>().ForMember(destinationMember => destinationMember.InsertCrmAccountCommandResponse ,opearation => opearation.MapFrom( z => z.CrmAccountList ));
-            
+            CreateMap<CrmAccountRoot, InsertCrmAccountCommandResponseRoot>().ForMember(destinationMember => destinationMember.InsertCrmAccountCommandResponse, opearation => opearation.MapFrom( z => z.CrmAccountList )).ReverseMap();
+            CreateMap<CrmAccountValue, InsertCrmAccountCommandResponse>().ReverseMap();           
 
         }
         
