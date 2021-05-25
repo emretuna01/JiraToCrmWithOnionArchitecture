@@ -28,41 +28,54 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
         
         }
 
-        [HttpPost("getcrmuserfromservice")]
+        #region CrmUser
+
+        [HttpPost("get/crmuser/fromservice")]
         public async Task<string> GetCrmUserFromService(GetCrmUserRequest getCrmUserRequest)
         {
             return await _crmServiceManager.GetCrmUserManager(getCrmUserRequest);
         }
 
-        [HttpPost("insertcrmuser")]
+        [HttpPost("insert/crmuser")]
         public async Task<InsertCrmUserCommandServiceResponse> InsertCrmUserFromService(GetUserByNameRequest getUserByNameRequest)
         {
             return await _crmServiceManager.InsertCrmUserManager(getUserByNameRequest);
         }
 
-        [HttpGet("getcrmuserfromdb")]
+        [HttpGet("get/crmuser/fromdb")]
         public async Task<List<GetCrmUserResponse>> GetCrmUserFromDb()
         {
             return await _getCrmUserHandler.GetCrmUserFromDb();
         }
 
-        [HttpPost("truncatecrmuserfromdb")]
+        [HttpPost("truncate/crmuser/fromdb")]
         public async Task<TruncateCrmUserCommandServiceResponse> TruncateCrmUserFromDb(TruncateCrmUserCommandRequest truncateCrmUserCommandRequest)
         {
             return await _truncateCrmUserCommandHandler.TruncateCrmUser(truncateCrmUserCommandRequest);
         }
 
-        [HttpPost("getcrmaccountfromservice")]
+        #endregion
+
+        #region CrmAccount
+
+        [HttpPost("get/crmaccount/fromservice")]
         public async Task<List<string>> GetCrmAccountFromService(GetCrmAccountRequest getCrmAccountRequest)
         {
-            return  await _crmServiceManager.GetCrmAccountManager(getCrmAccountRequest);            
+            return await _crmServiceManager.GetCrmAccountManager(getCrmAccountRequest);
         }
 
-        [HttpPost("insertcrmaccount")]
+        [HttpPost("insert/crmaccount")]
         public async Task<InsertCrmAccountCommandServiceResponse> InsertCrmAccountFromService(GetUserByNameRequest getUserByNameRequest)
         {
             return await _crmServiceManager.InsertCrmAccountManager(getUserByNameRequest);
         }
+
+        [HttpGet("get/crmaccount/fromdb")]
+       
+
+        #endregion
+
+
 
 
 
