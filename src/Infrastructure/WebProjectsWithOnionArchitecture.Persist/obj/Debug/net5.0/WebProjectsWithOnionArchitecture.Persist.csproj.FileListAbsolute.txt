@@ -1,8 +1,3 @@
-C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.csprojAssemblyReference.cache
-C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.AssemblyInfoInputs.cache
-C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.AssemblyInfo.cs
-C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.csproj.CoreCompileInputs.cache
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.deps.json
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.dll
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\bin\Debug\net5.0\ref\WebProjectsWithOnionArchitecture.Persist.dll
@@ -11,6 +6,11 @@ C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infra
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Domain.dll
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Application.pdb
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\bin\Debug\net5.0\WebProjectsWithOnionArchitecture.Domain.pdb
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.csprojAssemblyReference.cache
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.AssemblyInfoInputs.cache
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.AssemblyInfo.cs
+C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.csproj.CoreCompileInputs.cache
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.csproj.CopyComplete
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\WebProjectsWithOnionArchitecture.Persist.dll
 C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.Persist\obj\Debug\net5.0\ref\WebProjectsWithOnionArchitecture.Persist.dll

@@ -70,7 +70,7 @@ namespace WebProjectsWithOnionArchitecture.Infrastruct.Controllers.CrmController
             return await _crmServiceManager.InsertCrmAccountManager(getUserByNameRequest);
         }
 
-        [HttpGet("get/crmaccount/fromdb")]
+        //[HttpGet("get/crmaccount/fromdb")]
        
 
         #endregion

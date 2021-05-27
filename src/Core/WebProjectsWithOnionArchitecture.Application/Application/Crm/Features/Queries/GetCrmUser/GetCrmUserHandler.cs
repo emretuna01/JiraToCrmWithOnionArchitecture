@@ -20,7 +20,7 @@ namespace WebProjectsWithOnionArchitecture.Application.Application.Crm.Features.
 
         public async Task<List<GetCrmUserResponse>> GetCrmUserFromDb()
         {
-            return _mapper.Map<List<GetCrmUserResponse>>(await _crmUserRepository.GetAsync());            
+            return  _mapper.Map<List<GetCrmUserResponse>>(await _crmUserRepository.GetAsync());            
         }
 
     }
