@@ -1,2 +1,0 @@
-C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.InfrastructTests\obj\Debug\.netcoreapp,version=v5.0\WebProjectsWithOnionArchitecture.InfrastructTests.csprojAssemblyReference.cache
-C:\Users\Emre\source\repos\emretuna01\WebProjectsWithOnionArchitecture\src\Infrastructure\WebProjectsWithOnionArchitecture.InfrastructTests\obj\Debug\.netcoreapp,version=v5.0\WebProjectsWithOnionArchitecture.InfrastructTests.GeneratedMSBuildEditorConfig.editorconfig

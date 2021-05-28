@@ -1,2 +1,10 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+.vs/WebProjectsWithOnionArchitecture/v16/.suo
+.vs/WebProjectsWithOnionArchitecture/v16/.suo
+WebProjectsWithOnionArchitecture/src/Infrastructure/WebProjectsWithOnionArchitecture.Infrastruct/appsettings.json
+*.exe
+*.pdb
+*.manifest
+*.cache
+*.txt
